@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">Shop</string>
@@ -11,5 +12,10 @@
     <string name="tomato">Tomato</string>
     <string name="search_title">Add</string>
     <string name="productName">Mozzarella</string>
+    <string name="add_hint">I want...</string>
+    <string name="app_label">Where is this??????????</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="menu_add">Add</string>
 
 </resources>

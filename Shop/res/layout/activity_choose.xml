@@ -37,7 +37,7 @@
         android:layout_height="match_parent"
         android:layout_alignLeft="@+id/addText"
         android:layout_below="@+id/addButton"
-        android:horizontalSpacing="1dp"
+        android:horizontalSpacing="5dp"
         android:numColumns="3" >
 
     </GridView>

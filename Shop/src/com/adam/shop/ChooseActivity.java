@@ -2,7 +2,9 @@ package com.adam.shop;
 
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
+import android.app.SearchManager;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
@@ -16,6 +18,7 @@ import android.widget.CursorAdapter;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 
 import com.adam.shop.database.ChoiceTable;
 import com.adam.shop.database.ProductAdapter;
@@ -36,6 +39,14 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_choose, menu);
+		// Get the SearchView and set the searchable configuration
+		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+		SearchView searchView = (SearchView) menu.findItem(R.id.menu_add).getActionView();
+		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		searchView.setIconifiedByDefault(false); // Do not iconify the widget;
+		searchView.setSubmitButtonEnabled(true); // enable submit
+		// expand it by default
+		
 		return true;
 	}
 	
