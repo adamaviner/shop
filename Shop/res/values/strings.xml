@@ -17,5 +17,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_add">AddActivity</string>
     <string name="menu_add">Add</string>
+    <string name="menu_search">Menu Search</string>
 
 </resources>

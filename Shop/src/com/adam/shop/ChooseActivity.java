@@ -3,6 +3,7 @@ package com.adam.shop;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.SearchManager;
+import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.CursorLoader;
@@ -42,7 +43,8 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 		// Get the SearchView and set the searchable configuration
 		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 		SearchView searchView = (SearchView) menu.findItem(R.id.menu_add).getActionView();
-		searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+		searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName(
+				"com.adam.shop", "com.adam.shop.AddActivity")));
 		searchView.setIconifiedByDefault(false); // Do not iconify the widget;
 		searchView.setSubmitButtonEnabled(true); // enable submit
 		// expand it by default

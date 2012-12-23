@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adam.shop"
     android:versionCode="1"
@@ -8,30 +9,47 @@
         android:targetSdkVersion="17" />
 
     <application
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <!-- Default activity -->
         <activity
-            android:name=".ChooseActivity"
-            android:label="@string/app_name" 
+            android:name="com.adam.shop.ChooseActivity"
+            android:label="@string/app_name"
             android:windowSoftInputMode="stateUnchanged">
+            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TestActivity"
-            android:label="@string/title_activity_test" >
-        </activity>
 
+        <!-- Content provider of the items in the list -->
         <provider
             android:name="com.adam.shop.database.ShopContentProvider"
             android:authorities="com.adam.shop.database.ShopContentProvider"
             android:exported="false"
             android:multiprocess="true" >
         </provider>
+
+        <!--  This activity handles searches --> 
+        <activity
+            android:name="com.adam.shop.AddActivity"
+            android:label="@string/title_activity_add" >
+            
+            <!-- Receives the search request. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            
+            <!-- Points to searchable meta data. -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        
     </application>
 
 </manifest>
