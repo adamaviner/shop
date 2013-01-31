@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -16,7 +17,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CursorAdapter;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
@@ -35,6 +35,31 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_choose);
 		fillData();
+		handleIntent(getIntent());
+	}
+	
+	@Override
+	protected void onNewIntent(Intent intent) {
+		// Because this activity has set launchMode="singleTop", the system
+		// calls this method
+		// to deliver the intent if this activity is currently the foreground
+		// activity when
+		// invoked again (when the user executes a search from this activity, we
+		// don't create
+		// a new instance of this activity, so the system delivers the search
+		// intent here)
+		handleIntent(intent);
+	}
+	
+	private void handleIntent(Intent intent) {
+		if (Intent.ACTION_VIEW.equals(intent.getAction())) {
+			// handles a click on a search suggestion; launches activity to show
+			// word
+		} else if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+			// handles a search query
+			String query = intent.getStringExtra(SearchManager.QUERY);
+			add(query);
+		}
 	}
 	
 	@Override
@@ -44,7 +69,7 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
 		SearchView searchView = (SearchView) menu.findItem(R.id.menu_add).getActionView();
 		searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName(
-				"com.adam.shop", "com.adam.shop.AddActivity")));
+				"com.adam.shop", "com.adam.shop.ChooseActivity")));
 		searchView.setIconifiedByDefault(false); // Do not iconify the widget;
 		searchView.setSubmitButtonEnabled(true); // enable submit
 		// expand it by default
@@ -59,16 +84,25 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 		grid.setAdapter(adapter);
 	}
 	
-	public void add(View view) {
-		EditText editText = (EditText) findViewById(R.id.addText);
-		String name = editText.getText().toString();
+	/**
+	 * Adds the product to the list
+	 * 
+	 * @param name
+	 *            - name of the product we want to add to the list
+	 * 
+	 */
+	private void add(String name) {
 		if (TextUtils.isEmpty(name)) return;
 		ContentValues values = new ContentValues();
 		values.put(ChoiceTable.COLUMN_NAME, name);
 		getContentResolver().insert(ShopContentProvider.CONTENT_URI, values);
-		editText.setText("");
 	}
 	
+	/**
+	 * removes the product from the list
+	 * 
+	 * @param view
+	 */
 	public void remove(View view) {
 		RelativeLayout rl = (RelativeLayout) view.getParent();
 		Holder holder = (Holder) rl.getTag();

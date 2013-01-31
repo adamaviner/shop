@@ -4,39 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/addText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/iWant"
-        android:inputType="textPersonName"
-        >
-
-    </EditText>
-
-    <Button
-        android:id="@+id/addButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/addText"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/addText"
-        android:background="@android:color/transparent"
-        android:drawableTop="@android:drawable/ic_input_add"
-        android:onClick="add" />
-
     <GridView
         android:id="@+id/grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignLeft="@+id/addText"
-        android:layout_below="@+id/addButton"
         android:horizontalSpacing="5dp"
         android:numColumns="3" >
 
