@@ -15,14 +15,17 @@ import com.adam.shop.R;
 public class ProductAdapter extends CursorAdapter {
 	
 	private final LayoutInflater mInflater;
+	private final boolean isGridView;
 	
-	public ProductAdapter(Context context, Cursor c, int flags) {
+	public ProductAdapter(final Context context, final Cursor c, final int flags,
+			final boolean isGridView) {
 		super(context, c, flags);
 		mInflater = LayoutInflater.from(context);
+		this.isGridView = isGridView;
 	}
 	
 	@Override
-	public void bindView(View view, Context context, Cursor cursor) {
+	public void bindView(final View view, final Context context, final Cursor cursor) {
 		Holder holder = (Holder) view.getTag();
 		
 		if (holder == null) {
@@ -45,8 +48,12 @@ public class ProductAdapter extends CursorAdapter {
 	}
 	
 	@Override
-	public View newView(Context context, Cursor cursor, ViewGroup parent) {
-		final View view = mInflater.inflate(R.layout.product_item, parent, false);
+	public View newView(final Context context, final Cursor cursor, final ViewGroup parent) {
+		View view;
+		if (isGridView)
+			view = mInflater.inflate(R.layout.product_item, parent, false);
+		else
+			view = mInflater.inflate(R.layout.line_list_item, parent, false);
 		return view;
 	}
 	

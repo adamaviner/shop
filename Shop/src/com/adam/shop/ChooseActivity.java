@@ -15,9 +15,11 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.View;
+import android.widget.AbsListView;
 import android.widget.CheckBox;
 import android.widget.CursorAdapter;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 
@@ -29,17 +31,26 @@ import com.adam.shop.database.ShopContentProvider;
 public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> {
 	
 	private CursorAdapter adapter;
+	private final boolean isGridView = false;
 	
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_choose);
+		if (isGridView)
+			setContentView(R.layout.activity_choose);
+		else
+			setContentView(R.layout.line_list);
 		fillData();
 		handleIntent(getIntent());
+		
+		// Activate animations for changes in the list
+		// final ListView view = (ListView) findViewById(R.id.lines);
+		// final LayoutTransition transition = view.getLayoutTransition();
+		// transition.enableTransitionType(LayoutTransition.CHANGING);
 	}
 	
 	@Override
-	protected void onNewIntent(Intent intent) {
+	protected void onNewIntent(final Intent intent) {
 		// Because this activity has set launchMode="singleTop", the system
 		// calls this method
 		// to deliver the intent if this activity is currently the foreground
@@ -51,23 +62,23 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 		handleIntent(intent);
 	}
 	
-	private void handleIntent(Intent intent) {
+	private void handleIntent(final Intent intent) {
 		if (Intent.ACTION_VIEW.equals(intent.getAction())) {
 			// handles a click on a search suggestion; launches activity to show
 			// word
 		} else if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
 			// handles a search query
-			String query = intent.getStringExtra(SearchManager.QUERY);
+			final String query = intent.getStringExtra(SearchManager.QUERY);
 			add(query);
 		}
 	}
 	
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public boolean onCreateOptionsMenu(final Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_choose, menu);
 		// Get the SearchView and set the searchable configuration
-		SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-		SearchView searchView = (SearchView) menu.findItem(R.id.menu_add).getActionView();
+		final SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+		final SearchView searchView = (SearchView) menu.findItem(R.id.menu_add).getActionView();
 		searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName(
 				"com.adam.shop", "com.adam.shop.ChooseActivity")));
 		searchView.setIconifiedByDefault(false); // Do not iconify the widget;
@@ -79,9 +90,13 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 	
 	private void fillData() {
 		getLoaderManager().initLoader(0, null, this);
-		adapter = new ProductAdapter(this, null, 0);
-		GridView grid = (GridView) findViewById(R.id.grid);
-		grid.setAdapter(adapter);
+		adapter = new ProductAdapter(this, null, 0, isGridView);
+		AbsListView view;
+		if (isGridView)
+			view = (GridView) findViewById(R.id.grid);
+		else
+			view = (ListView) findViewById(R.id.lines);
+		view.setAdapter(adapter);
 	}
 	
 	/**
@@ -91,9 +106,9 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 	 *            - name of the product we want to add to the list
 	 * 
 	 */
-	private void add(String name) {
+	private void add(final String name) {
 		if (TextUtils.isEmpty(name)) return;
-		ContentValues values = new ContentValues();
+		final ContentValues values = new ContentValues();
 		values.put(ChoiceTable.COLUMN_NAME, name);
 		getContentResolver().insert(ShopContentProvider.CONTENT_URI, values);
 	}
@@ -103,42 +118,42 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 	 * 
 	 * @param view
 	 */
-	public void remove(View view) {
-		RelativeLayout rl = (RelativeLayout) view.getParent();
-		Holder holder = (Holder) rl.getTag();
-		Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
+	public void remove(final View view) {
+		final RelativeLayout rl = (RelativeLayout) view.getParent();
+		final Holder holder = (Holder) rl.getTag();
+		final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
 		getContentResolver().delete(uri, null, null);
 	}
 	
-	public void checkBoxCheck(View view) {
-		CheckBox checkBox = (CheckBox) view;
-		RelativeLayout rl = (RelativeLayout) view.getParent();
-		Holder holder = (Holder) rl.getTag();
-		Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
-		ContentValues values = new ContentValues();
+	public void checkBoxCheck(final View view) {
+		final CheckBox checkBox = (CheckBox) view;
+		final RelativeLayout rl = (RelativeLayout) view.getParent();
+		final Holder holder = (Holder) rl.getTag();
+		final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
+		final ContentValues values = new ContentValues();
 		values.put(ChoiceTable.COLUMN_CHECKED, checkBox.isChecked());
 		getContentResolver().update(uri, values, null, null);
 	}
 	
 	// Creates a new loader after the initLoader () call
 	@Override
-	public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-		String[] projection = { ChoiceTable.COLUMN_ID, ChoiceTable.COLUMN_NAME,
+	public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+		final String[] projection = { ChoiceTable.COLUMN_ID, ChoiceTable.COLUMN_NAME,
 				ChoiceTable.COLUMN_QUANTITY, ChoiceTable.COLUMN_CHECKED };
-		String checked = ChoiceTable.COLUMN_CHECKED;
-		String name = ChoiceTable.COLUMN_NAME;
-		CursorLoader cursorLoader = new CursorLoader(this, ShopContentProvider.CONTENT_URI,
+		final String checked = ChoiceTable.COLUMN_CHECKED;
+		final String name = ChoiceTable.COLUMN_NAME;
+		final CursorLoader cursorLoader = new CursorLoader(this, ShopContentProvider.CONTENT_URI,
 				projection, null, null, checked + ", UPPER(" + name + ")," + name);
 		return cursorLoader;
 	}
 	
 	@Override
-	public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+	public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {
 		adapter.swapCursor(data);
 	}
 	
 	@Override
-	public void onLoaderReset(Loader<Cursor> loader) {
+	public void onLoaderReset(final Loader<Cursor> loader) {
 		// data is not available anymore, delete reference
 		adapter.swapCursor(null);
 	}
