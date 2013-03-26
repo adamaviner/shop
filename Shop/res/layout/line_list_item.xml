@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+       <EditText
+           android:id="@+id/productQuantity"
+           style="@android:style/Holo.ButtonBar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:layout_alignParentLeft="true"
+           android:inputType="numberDecimal|none"
+           android:maxLength="2"
+           android:selectAllOnFocus="true"
+           android:text="@string/productAmount"
+           android:fontFamily="sans-serif-light"
+           android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/productQuantity"
+            android:layout_alignBottom="@+id/productQuantity"
+            android:layout_marginBottom="2dp"
+            android:maxWidth="150dp"
+            android:text="@string/productName"
+            android:textSize="22sp" />
+
+        <CheckBox
+            android:id="@+id/purchasedCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:onClick="checkBoxCheck" />
+        
+        <Button
+        android:id="@+id/deleteButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_toLeftOf="@+id/purchasedCheckbox"
+        android:background="@android:color/transparent"
+        android:drawableTop="@android:drawable/ic_delete"
+        android:onClick="remove" />
+
+</RelativeLayout>
