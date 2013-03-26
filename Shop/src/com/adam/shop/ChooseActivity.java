@@ -29,7 +29,6 @@ import com.adam.shop.database.ProductAdapter.Holder;
 import com.adam.shop.database.ShopContentProvider;
 
 public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> {
-
     private CursorAdapter adapter;
     private final boolean isGridView = true;
 
@@ -95,9 +94,7 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 
     /**
      * Adds the product to the list
-     * @param name
-     *            - name of the product we want to add to the list
-     *
+     * @param name - name of the product we want to add to the list
      */
     private void add(final String name) {
         if (TextUtils.isEmpty(name)) return;
@@ -108,7 +105,6 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
 
     /**
      * removes the product from the list
-     *
      * @param view - the view of the list we are removing the product from.
      */
     public void remove(final View view) {
@@ -149,5 +145,4 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
         // data is not available anymore, delete reference
         adapter.swapCursor(null);
     }
-
 }
