@@ -38,7 +38,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
 
 
         setChoiceMode();
-        SwipeDismissList list = makeListSwipeable();
 
         fillData();
         handleIntent(getIntent());
@@ -47,31 +46,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         // final ListView view = (ListView) findViewById(R.id.lines);
         // final LayoutTransition transition = view.getLayoutTransition();
         // transition.enableTransitionType(LayoutTransition.CHANGING);
-    }
-
-    private SwipeDismissList makeListSwipeable() {ListView listView = getListView();
-        final SwipeDismissList.OnDismissCallback callback = new SwipeDismissList.OnDismissCallback() {
-            @Override
-            public SwipeDismissList.Undoable onDismiss(final ListView listView, final int position) {
-                View view = adapter.getView(position, null, null);
-                remove(view);
-                return new SwipeDismissList.Undoable() {
-                    @Override
-                    public void undo() {
-                        add("Undoed");
-                    }
-
-                    public String getTitle(){
-                        return "Title";
-                    }
-                    public void discard(){
-                        //delete item
-                    }
-                };
-            }
-        };
-        final SwipeDismissList.UndoMode mode = SwipeDismissList.UndoMode.SINGLE_UNDO;
-        return new SwipeDismissList(listView, callback, mode);
     }
 
     private void setChoiceMode() {
