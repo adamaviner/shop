@@ -1,36 +1,33 @@
 package com.adam.shop;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ListActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.SearchManager;
-import android.content.ComponentName;
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.CursorLoader;
-import android.content.Intent;
-import android.content.Loader;
+import android.content.*;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AbsListView;
-import android.widget.CheckBox;
-import android.widget.CursorAdapter;
-import android.widget.GridView;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.SearchView;
+import android.widget.*;
 
 import com.adam.shop.database.ChoiceTable;
 import com.adam.shop.database.ProductAdapter;
 import com.adam.shop.database.ProductAdapter.Holder;
 import com.adam.shop.database.ShopContentProvider;
 
-public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> {
+public class ChooseActivity extends ListActivity implements LoaderCallbacks<Cursor> {
     private CursorAdapter adapter;
     private final boolean isGridView = false;
+
+    @Override
+    protected void onListItemClick(final ListView l, final View v, final int position, final long id) {
+        getListView().setItemChecked(position,true);
+        super.onListItemClick(l, v, position, id);
+    }
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -41,7 +38,7 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
             setContentView(R.layout.line_list);
 
 
-        //setChoiceMode();
+        setChoiceMode();
         fillData();
         handleIntent(getIntent());
 
@@ -52,9 +49,9 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
     }
 
     private void setChoiceMode() {
-        ListView listView = (ListView) findViewById(R.id.lines);
+        ListView listView = getListView();
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
-        listView.setMultiChoiceModeListener(new MultiChoiceModeListener());
+        listView.setMultiChoiceModeListener(new MultiChoiceModeListener(getListView()));
     }
 
     @Override
@@ -97,7 +94,7 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
         if (isGridView)
             view = (GridView) findViewById(R.id.grid);
         else
-            view = (ListView) findViewById(R.id.lines);
+            view = (ListView) findViewById(android.R.id.list);
         view.setAdapter(adapter);
     }
 
@@ -124,6 +121,12 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
     }
 
     public void checkBoxCheck(final View view) {
+        ListView listView = (ListView) findViewById(android.R.id.list);
+        int pos = listView.getCheckedItemPosition();
+        listView.setItemChecked(pos,true);
+    }
+
+    public void checkBoxChecked(final View view) {
         final CheckBox checkBox = (CheckBox) view;
         final RelativeLayout rl = (RelativeLayout) view.getParent();
         final Holder holder = (Holder) rl.getTag();

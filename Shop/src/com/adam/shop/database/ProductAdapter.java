@@ -29,7 +29,7 @@ public class ProductAdapter extends CursorAdapter {
             holder = new Holder();
             holder.productName = (TextView) view.findViewById(R.id.productName);
             holder.productQuantity = (TextView) view.findViewById(R.id.productQuantity);
-            holder.checked = (CheckBox) view.findViewById(R.id.purchasedCheckbox);
+            //holder.checked = (CheckBox) view.findViewById(R.id.purchasedCheckbox);
             holder.nameIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_NAME);
             holder.checkedIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_CHECKED);
             holder.idIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_ID);
@@ -37,10 +37,10 @@ public class ProductAdapter extends CursorAdapter {
         }
         holder.productName.setText(cursor.getString(holder.nameIndex));
         holder.productId = cursor.getInt(holder.idIndex);
-        holder.checked.setChecked(cursor.getInt(holder.checkedIndex) != 0);
-        if (holder.checked.isChecked()) {
-            view.setAlpha(0.6f);
-        } else view.setAlpha(1f);
+      //  holder.checked.setChecked(cursor.getInt(holder.checkedIndex) != 0);
+       // if (holder.checked.isChecked()) {
+        //    view.setAlpha(0.6f);
+        //} else view.setAlpha(1f);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class ProductAdapter extends CursorAdapter {
         public int idIndex;
         public int nameIndex;
         public int productId;
-        public CheckBox checked;
+       // public CheckBox checked;
         public TextView productName;
         public TextView productQuantity;
     }

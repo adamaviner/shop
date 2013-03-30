@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="?android:attr/activatedBackgroundIndicator">
     
        <TextView
            android:id="@+id/productQuantity"
@@ -15,9 +16,12 @@
            android:selectAllOnFocus="true"
            android:text="@string/productAmount"
            style="@style/SecondaryFont"
-           android:textSize="22sp"/>
+           android:textSize="22sp"
+           android:focusableInTouchMode="false"
+           android:clickable="false"
+           android:focusable="false"/>
 
-        <TextView
+        <CheckedTextView
             android:id="@+id/productName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +31,11 @@
             android:layout_marginBottom="2dp"
             android:maxWidth="150dp"
             android:text="@string/productName"
-            style="@style/PrimeFont"/>
+            style="@style/PrimeFont"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"/>
 
         <TextView
             android:id="@+id/productSecondaryName"
@@ -38,26 +46,30 @@
             android:layout_marginTop="2dp"
             style="@style/SecondaryFont"
             android:text="2 MINUTES AGO"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:focusable="false"
             />
 
-        <CheckBox
+      <!--  <CheckBox
             android:id="@+id/purchasedCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
             android:layout_alignBaseline="@+id/productName"
-            android:onClick="checkBoxCheck" />
+            android:onClick="checkBoxCheck"/>
 
         <Button
         android:id="@+id/deleteButton"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_toLeftOf="@+id/purchasedCheckbox"
         android:layout_marginTop="14dp"
+        android:layout_alignLeft="@id/productQuantity"
+        android:layout_marginLeft="16dp"
         android:background="@android:color/transparent"
         android:drawableTop="@android:drawable/ic_delete"
-        android:onClick="remove" />
+        android:onClick="remove" />       -->
 
 </RelativeLayout>

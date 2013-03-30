@@ -1,18 +1,24 @@
 package com.adam.shop;
 
+import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.AbsListView;
+import android.widget.ListView;
 
 
 public class MultiChoiceModeListener implements AbsListView.MultiChoiceModeListener{
 
+    private final ListView list;
+
+    MultiChoiceModeListener(ListView list){
+        this.list = list;
+    }
     @Override
     public void onItemCheckedStateChanged(ActionMode mode, int position,
                                           long id, boolean checked) {
-        long i = id;
         // Here you can do something when items are selected/de-selected,
         // such as update the title in the CAB
     }
@@ -22,12 +28,17 @@ public class MultiChoiceModeListener implements AbsListView.MultiChoiceModeListe
         // Respond to clicks on the actions in the CAB
         switch (item.getItemId()) {
             case R.id.menu_delete:
-                //deleteSelectedItems();
+                deleteSelectedItems();
                 mode.finish(); // Action picked, so close the CAB
                 return true;
             default:
                 return false;
         }
+    }
+
+    private void deleteSelectedItems() {
+        SparseBooleanArray items = list.getCheckedItemPositions();
+
     }
 
     @Override
