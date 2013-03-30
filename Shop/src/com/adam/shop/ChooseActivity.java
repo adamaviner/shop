@@ -30,7 +30,7 @@ import com.adam.shop.database.ShopContentProvider;
 
 public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> {
     private CursorAdapter adapter;
-    private final boolean isGridView = true;
+    private final boolean isGridView = false;
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
             setContentView(R.layout.line_list);
 
 
-        setChoiceMode();
+        //setChoiceMode();
         fillData();
         handleIntent(getIntent());
 

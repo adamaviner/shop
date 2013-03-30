@@ -12,6 +12,7 @@ public class MultiChoiceModeListener implements AbsListView.MultiChoiceModeListe
     @Override
     public void onItemCheckedStateChanged(ActionMode mode, int position,
                                           long id, boolean checked) {
+        long i = id;
         // Here you can do something when items are selected/de-selected,
         // such as update the title in the CAB
     }

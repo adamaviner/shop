@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CursorAdapter;
-import android.widget.EditText;
 import android.widget.TextView;
 import com.adam.shop.R;
 
@@ -29,7 +28,7 @@ public class ProductAdapter extends CursorAdapter {
         if (holder == null) {
             holder = new Holder();
             holder.productName = (TextView) view.findViewById(R.id.productName);
-            holder.productQuantity = (EditText) view.findViewById(R.id.productQuantity);
+            holder.productQuantity = (TextView) view.findViewById(R.id.productQuantity);
             holder.checked = (CheckBox) view.findViewById(R.id.purchasedCheckbox);
             holder.nameIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_NAME);
             holder.checkedIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_CHECKED);
@@ -59,6 +58,6 @@ public class ProductAdapter extends CursorAdapter {
         public int productId;
         public CheckBox checked;
         public TextView productName;
-        public EditText productQuantity;
+        public TextView productQuantity;
     }
 }
