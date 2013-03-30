@@ -39,6 +39,9 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
             setContentView(R.layout.activity_choose);
         else
             setContentView(R.layout.line_list);
+
+
+        setChoiceMode();
         fillData();
         handleIntent(getIntent());
 
@@ -46,6 +49,12 @@ public class ChooseActivity extends Activity implements LoaderCallbacks<Cursor> 
         // final ListView view = (ListView) findViewById(R.id.lines);
         // final LayoutTransition transition = view.getLayoutTransition();
         // transition.enableTransitionType(LayoutTransition.CHANGING);
+    }
+
+    private void setChoiceMode() {
+        ListView listView = (ListView) findViewById(R.id.lines);
+        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+        listView.setMultiChoiceModeListener(new MultiChoiceModeListener());
     }
 
     @Override
