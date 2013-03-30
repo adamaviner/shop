@@ -1,7 +1,5 @@
 package com.adam.shop;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.SearchManager;
@@ -18,6 +16,7 @@ import com.adam.shop.database.ChoiceTable;
 import com.adam.shop.database.ProductAdapter;
 import com.adam.shop.database.ProductAdapter.Holder;
 import com.adam.shop.database.ShopContentProvider;
+import de.timroes.swipetodismiss.*;
 
 public class ChooseActivity extends ListActivity implements LoaderCallbacks<Cursor> {
     private CursorAdapter adapter;
@@ -25,7 +24,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
 
     @Override
     protected void onListItemClick(final ListView l, final View v, final int position, final long id) {
-        getListView().setItemChecked(position,true);
+        getListView().setItemChecked(position, true);
         super.onListItemClick(l, v, position, id);
     }
 
@@ -39,6 +38,8 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
 
 
         setChoiceMode();
+        SwipeDismissList list = makeListSwipeable();
+
         fillData();
         handleIntent(getIntent());
 
@@ -46,6 +47,19 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         // final ListView view = (ListView) findViewById(R.id.lines);
         // final LayoutTransition transition = view.getLayoutTransition();
         // transition.enableTransitionType(LayoutTransition.CHANGING);
+    }
+
+    private SwipeDismissList makeListSwipeable() {ListView listView = getListView();
+        final SwipeDismissList.OnDismissCallback callback = new SwipeDismissList.OnDismissCallback() {
+            @Override
+            public SwipeDismissList.Undoable onDismiss(final ListView listView, final int position) {
+                View view = adapter.getView(position, null, null);
+                remove(view);
+                return null;  //To change body of implemented methods use File | Settings | File Templates.
+            }
+        };
+        final SwipeDismissList.UndoMode mode = SwipeDismissList.UndoMode.SINGLE_UNDO;
+        return new SwipeDismissList(listView, callback, mode);
     }
 
     private void setChoiceMode() {
@@ -110,15 +124,16 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     }
 
     /**
-     * removes the product from the list
-     * @param view - the view of the list we are removing the product from.
+     * remove product from the list
+     * @param view - the RelativeLayout of the item we wish to remove
      */
-    public void remove(final View view) {
-        final RelativeLayout rl = (RelativeLayout) view.getParent();
-        final Holder holder = (Holder) rl.getTag();
+    private void remove(final View view){
+        final RelativeLayout relativeLayout = (RelativeLayout) view;
+        final Holder holder = (Holder) relativeLayout.getTag();
         final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
         getContentResolver().delete(uri, null, null);
     }
+
 
     public void checkBoxCheck(final View view) {
         ListView listView = (ListView) findViewById(android.R.id.list);
