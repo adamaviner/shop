@@ -55,7 +55,19 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
             public SwipeDismissList.Undoable onDismiss(final ListView listView, final int position) {
                 View view = adapter.getView(position, null, null);
                 remove(view);
-                return null;  //To change body of implemented methods use File | Settings | File Templates.
+                return new SwipeDismissList.Undoable() {
+                    @Override
+                    public void undo() {
+                        add("Undoed");
+                    }
+
+                    public String getTitle(){
+                        return "Title";
+                    }
+                    public void discard(){
+                        //delete item
+                    }
+                };
             }
         };
         final SwipeDismissList.UndoMode mode = SwipeDismissList.UndoMode.SINGLE_UNDO;
