@@ -5,7 +5,6 @@ import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 import com.adam.shop.R;
@@ -47,7 +46,7 @@ public class ProductAdapter extends CursorAdapter {
     public View newView(final Context context, final Cursor cursor, final ViewGroup parent) {
         View view;
         if (isGridView) view = mInflater.inflate(R.layout.product_item, parent, false);
-        else view = mInflater.inflate(R.layout.line_list_item, parent, false);
+        else view = mInflater.inflate(R.layout.list_item_front, parent, false);
         return view;
     }
 

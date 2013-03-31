@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:background="?android:attr/activatedBackgroundIndicator">
+
+
+    <!-- the back of the item -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:id="@+id/back"
+                    android:background="@android:color/darker_gray">
+        <Button
+            android:id="@+id/undoText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="|  UNDO"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            style="@style/PrimeFont"
+            android:textColor="@android:color/white"
+            android:background="@null"
+            android:onClick="undo"
+                />
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="90dp"
+                    android:id="@+id/front"
+                    android:background="@android:color/white"
+            >
+
+        <TextView
+                android:id="@+id/productQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/productName"
+                android:layout_alignBaseline="@+id/productName"
+                android:inputType="numberDecimal|none"
+                android:maxLength="2"
+                android:selectAllOnFocus="true"
+                android:text="@string/productAmount"
+                style="@style/SecondaryFont"
+                android:textSize="22sp"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:focusable="false"/>
+
+        <CheckedTextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="2dp"
+                android:maxWidth="150dp"
+                android:text="@string/productName"
+                style="@style/PrimeFont"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:focusable="false"/>
+
+        <TextView
+                android:id="@+id/productSecondaryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productName"
+                android:layout_alignLeft="@+id/productName"
+                android:layout_marginTop="2dp"
+                style="@style/SecondaryFont"
+                android:text="2 MINUTES AGO"
+                android:focusableInTouchMode="false"
+                android:clickable="false"
+                android:focusable="false"
+                />
+    </RelativeLayout>
+
+
+
+
+
+</FrameLayout>

@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class ShopDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "todotable.db";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
 
     public ShopDatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
