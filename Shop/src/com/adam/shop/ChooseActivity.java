@@ -55,7 +55,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
             public void onDismiss(final int[] reverseSortedPositions) {
                 for (int position : reverseSortedPositions){
                     View view = (View) adapter.getView(position, null, null);
-                    remove(view);
+                    archive(view);
                 }
             }
         });
@@ -128,6 +128,18 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         final Holder holder = (Holder) view.getTag();
         final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
         getContentResolver().delete(uri, null, null);
+    }
+
+    /**
+     * reverses the checked state of the view
+     * @param view
+     */
+    private void archive(final View view){
+        final Holder holder = (Holder) view.getTag();
+        final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
+        final ContentValues values = new ContentValues();
+        values.put(ChoiceTable.COLUMN_CHECKED, !holder.checked);
+        getContentResolver().update(uri, values, null, null);
     }
 
     public void undo(View view) {

@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 import com.adam.shop.R;
@@ -32,14 +33,15 @@ public class ProductAdapter extends CursorAdapter {
             holder.nameIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_NAME);
             holder.checkedIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_CHECKED);
             holder.idIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_ID);
+            holder.checked = false;
             view.setTag(holder);
         }
         holder.productName.setText(cursor.getString(holder.nameIndex));
         holder.productId = cursor.getInt(holder.idIndex);
-      //  holder.checked.setChecked(cursor.getInt(holder.checkedIndex) != 0);
-       // if (holder.checked.isChecked()) {
-        //    view.setAlpha(0.6f);
-        //} else view.setAlpha(1f);
+        holder.checked = (cursor.getInt(holder.checkedIndex) != 0);
+        if (holder.checked) {
+            view.setAlpha(0.6f);
+        } else view.setAlpha(1f);
     }
 
     @Override
@@ -55,7 +57,7 @@ public class ProductAdapter extends CursorAdapter {
         public int idIndex;
         public int nameIndex;
         public int productId;
-       // public CheckBox checked;
+        public boolean checked;
         public TextView productName;
         public TextView productQuantity;
     }
