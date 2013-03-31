@@ -57,6 +57,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
                     View view = (View) adapter.getView(position, null, null);
                     archive(view);
                 }
+                listView.invalidate();
             }
         });
     }
@@ -117,6 +118,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         final ContentValues values = new ContentValues();
         values.put(ChoiceTable.COLUMN_NAME, name);
         getContentResolver().insert(ShopContentProvider.CONTENT_URI, values);
+        listView.invalidate();
     }
 
     /**
