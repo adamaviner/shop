@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
 import com.adam.shop.database.ChoiceTable;
@@ -23,6 +24,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     private CursorAdapter adapter;
     private final boolean isGridView = false;
     private SwipeListView listView;
+    private SwipeListView archivedListView;
 
     @Override
     protected void onListItemClick(final ListView l, final View v, final int position, final long id) {
@@ -54,11 +56,22 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
             @Override
             public void onDismiss(final int[] reverseSortedPositions) {
                 for (int position : reverseSortedPositions){
-                    View view = (View) adapter.getView(position, null, null);
+                    View view = adapter.getView(position, null, null);
                     archive(view);
                 }
                 listView.invalidate();
             }
+
+//            @Override       TODO: make the shit work.
+//            public void onClickFrontView(final int position) {
+//                final View view = listView.findViewByPosition(position);
+//                final EditText quantity = (EditText) view.findViewById(R.id.productQuantity);
+//                quantity.requestFocus();
+//                InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//                inputMethodManager.showSoftInput(quantity, 0);
+//                quantity.selectAll();
+//                super.onClickFrontView(position);
+//            }
         });
     }
 

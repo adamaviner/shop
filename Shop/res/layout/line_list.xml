@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:id="@android:id/list"
     android:animateLayoutChanges="true"
-    android:dividerHeight="16dp"
     android:layout_marginTop="16dp"
     android:divider="@android:color/transparent"
 
@@ -12,6 +11,4 @@
     android:listSelector="#00000000"
     swipe:swipeFrontView="@+id/front"
     swipe:swipeBackView="@+id/back"
-    swipe:swipeCloseAllItemsWhenMoveList="true"
-    swipe:swipeMode="both"
 />

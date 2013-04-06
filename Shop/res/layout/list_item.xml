@@ -36,22 +36,22 @@
                     android:background="@android:color/white"
             >
 
-        <TextView
+        <EditText
                 android:id="@+id/productQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_toRightOf="@+id/productName"
                 android:layout_alignBaseline="@+id/productName"
-                android:inputType="numberDecimal|none"
+                android:inputType="numberDecimal"
                 android:maxLength="2"
                 android:selectAllOnFocus="true"
                 android:text="@string/productAmount"
                 style="@style/SecondaryFont"
                 android:textSize="22sp"
-                android:focusableInTouchMode="false"
-                android:clickable="false"
-                android:focusable="false"/>
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:focusable="true"/>
 
         <CheckedTextView
                 android:id="@+id/productName"
