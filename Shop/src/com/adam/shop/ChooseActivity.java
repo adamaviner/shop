@@ -1,6 +1,7 @@
 package com.adam.shop;
 
 import android.app.ListActivity;
+import android.app.ListFragment;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.SearchManager;
 import android.content.*;
