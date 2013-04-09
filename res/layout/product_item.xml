@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="171dp" >
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/productName"
+        android:contentDescription="@string/productImageDescription"
+        android:src="@drawable/tomato" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="150dp"
+        android:text="@string/productName"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/productQuantity"
+        style="@android:style/Holo.ButtonBar"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="2dp"
+        android:inputType="numberDecimal|none"
+        android:maxLength="2"
+        android:selectAllOnFocus="true"
+        android:text="@string/productAmount"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="48sp" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent"
+        android:drawableTop="@android:drawable/ic_delete"
+        android:onClick="remove" />
+
+    <CheckBox
+        android:id="@+id/purchasedCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:button="@drawable/btn_check"
+        android:onClick="checkBoxCheck" />
+
+</RelativeLayout>

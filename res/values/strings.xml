@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shop</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_choose">Choose</string>
+    <string name="none">None</string>
+    <string name="iWant">I want…</string>
+    <string name="productImageDescription">A picture of the product</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="productAmount">1</string>
+    <string name="tomato">Tomato</string>
+    <string name="search_title">Add</string>
+    <string name="productName">Mozzarella</string>
+    <string name="add_hint">I want...</string>
+    <string name="app_label">Where is this??????????</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="menu_add">Add</string>
+    <string name="menu_search">Menu Search</string>
+
+</resources>
