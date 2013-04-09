@@ -20,5 +20,9 @@ local.properties
 .project
 
 #idea project files
-/.idea
-project.properties
+.idea/
+*.iml
+*.ims
+.DS_Store
+log/
+target/
