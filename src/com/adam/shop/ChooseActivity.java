@@ -52,11 +52,9 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     private void setListListener(final SwipeListView listView) {
         listView.setSwipeListViewListener(new BaseSwipeListViewListener() {
             @Override
-            public void onDismiss(final int[] reverseSortedPositions) {
-                for (int position : reverseSortedPositions) {
-                    View view = adapter.getView(position, null, null);
-                    archive(view);
-                }
+            public void onDismiss(final int position) {
+                View view = adapter.getView(position, null, null);
+                archive(view);
                 listView.invalidate();
             }
 
