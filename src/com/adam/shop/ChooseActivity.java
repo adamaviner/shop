@@ -1,7 +1,6 @@
 package com.adam.shop;
 
 import android.app.ListActivity;
-import android.app.ListFragment;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.app.SearchManager;
 import android.content.*;
@@ -11,9 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
-
 import com.adam.shop.database.ChoiceTable;
 import com.adam.shop.database.ProductAdapter;
 import com.adam.shop.database.ProductAdapter.Holder;
@@ -53,10 +50,10 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     }
 
     private void setListListener(final SwipeListView listView) {
-        listView.setSwipeListViewListener(new BaseSwipeListViewListener(){
+        listView.setSwipeListViewListener(new BaseSwipeListViewListener() {
             @Override
             public void onDismiss(final int[] reverseSortedPositions) {
-                for (int position : reverseSortedPositions){
+                for (int position : reverseSortedPositions) {
                     View view = adapter.getView(position, null, null);
                     archive(view);
                 }
@@ -74,11 +71,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
 //                super.onClickFrontView(position);
 //            }
         });
-    }
-
-    private void setChoiceMode() {
-        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
-        listView.setMultiChoiceModeListener(new MultiChoiceModeListener(listView));
     }
 
     @Override
@@ -148,9 +140,10 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
 
     /**
      * reverses the checked state of the view
+     *
      * @param view
      */
-    private void archive(final View view){
+    private void archive(final View view) {
         final Holder holder = (Holder) view.getTag();
         final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
         final ContentValues values = new ContentValues();
