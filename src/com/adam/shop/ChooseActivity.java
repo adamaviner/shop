@@ -43,10 +43,9 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         setListListener(listView);
         handleIntent(getIntent());
 
-        // Activate animations for changes in the list
-        // final ListView view = (ListView) findViewById(R.id.lines);
-        // final LayoutTransition transition = view.getLayoutTransition();
-        // transition.enableTransitionType(LayoutTransition.CHANGING);
+//        Activate animations for changes in the list
+//        final LayoutTransition transition = listView.getLayoutTransition();
+//        transition.enableTransitionType(LayoutTransition.CHANGING);
     }
 
     private void setListListener(final SwipeListView listView) {
@@ -55,7 +54,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
             public void onDismiss(final int position) {
                 View view = adapter.getView(position, null, null);
                 archive(view);
-                listView.invalidate();
             }
 
 //            @Override       TODO: make the shit work.
