@@ -37,8 +37,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         else setContentView(R.layout.line_list);
         listView = (SwipeListView) getListView();
 
-        //setChoiceMode();
-
         fillData();
         setListListener(listView);
         handleIntent(getIntent());
@@ -53,7 +51,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
             @Override
             public void onDismiss(final int position) {
                 View view = adapter.getView(position, null, null);
-                archive(view);
+                dismiss(view);
             }
 
 //            @Override       TODO: make the shit work.
@@ -128,7 +126,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
      *
      * @param view - the RelativeLayout of the item we wish to remove
      */
-    private void remove(final View view) {
+    private void dismiss(final View view) {
         final Holder holder = (Holder) view.getTag();
         final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
         getContentResolver().delete(uri, null, null);
