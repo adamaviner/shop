@@ -40,10 +40,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         fillData();
         setListListener(listView);
         handleIntent(getIntent());
-
-//        Activate animations for changes in the list
-//        final LayoutTransition transition = listView.getLayoutTransition();
-//        transition.enableTransitionType(LayoutTransition.CHANGING);
     }
 
     private void setListListener(final SwipeListView listView) {
@@ -118,7 +114,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         final ContentValues values = new ContentValues();
         values.put(ChoiceTable.COLUMN_NAME, name);
         getContentResolver().insert(ShopContentProvider.CONTENT_URI, values);
-        listView.invalidate();
+        adapter.notifyDataSetChanged();
     }
 
     /**
@@ -130,6 +126,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         final Holder holder = (Holder) view.getTag();
         final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
         getContentResolver().delete(uri, null, null);
+        adapter.notifyDataSetChanged();
     }
 
     /**

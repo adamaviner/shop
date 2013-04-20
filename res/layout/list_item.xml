@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="fill_parent"
-             android:layout_height="fill_parent"
-             android:background="?android:attr/activatedBackgroundIndicator">
+<com.fortysevendeg.android.swipelistview.PreDrawableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                                android:layout_width="fill_parent"
+                                                                android:layout_height="fill_parent"
+                                                                android:animateLayoutChanges="true"
+                                                                android:background="?android:attr/activatedBackgroundIndicator">
 
 
     <!-- the back of the item -->
@@ -13,18 +14,19 @@
                     android:layout_height="90dp"
                     android:id="@+id/back"
                     android:background="@android:color/darker_gray">
+
         <Button
-            android:id="@+id/undoText"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="|  UNDO"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="16dp"
-            android:layout_centerVertical="true"
-            style="@style/PrimeFont"
-            android:textColor="@android:color/white"
-            android:background="@null"
-            android:onClick="undo"
+                android:id="@+id/undoText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="|  UNDO"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                style="@style/PrimeFont"
+                android:textColor="@android:color/white"
+                android:background="@null"
+                android:onClick="undo"
                 />
 
     </RelativeLayout>
@@ -34,6 +36,7 @@
                     android:layout_height="90dp"
                     android:id="@+id/front"
                     android:background="@android:color/white"
+                    android:animateLayoutChanges="true"
             >
 
         <EditText
@@ -84,7 +87,4 @@
     </RelativeLayout>
 
 
-
-
-
-</FrameLayout>
+</com.fortysevendeg.android.swipelistview.PreDrawableFrameLayout>
