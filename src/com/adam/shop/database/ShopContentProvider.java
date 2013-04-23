@@ -1,5 +1,6 @@
 package com.adam.shop.database;
 
+import android.app.SearchManager;
 import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -11,16 +12,19 @@ import android.net.Uri;
 import android.text.TextUtils;
 
 public class ShopContentProvider extends ContentProvider {
-
     private ShopDatabaseHelper database;
 
     private static final String AUTHORITY = "com.adam.shop.database.ShopContentProvider";
-    public static final int CHOICES = 100;
 
+    public static final int CHOICES = 100;
     public static final int CHOICE_ID = 110;
+    public static final int PRODUCTS = 120;
+    public static final int SEARCH_SUGGEST = 130;
 
     private static final String CHOICES_BASE_PATH = "choices";
-    public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/" + CHOICES_BASE_PATH);
+    private static final String PRODUCTS_BASE_PATH = "products";
+    public static final Uri CHOICES_URI = Uri.parse("content://" + AUTHORITY + "/" + CHOICES_BASE_PATH);
+    public static final Uri PRODUCTS_URI = Uri.parse("content://" + AUTHORITY + "/" + PRODUCTS_BASE_PATH);
 
     public static final String CONTENT_ITEM_TYPE;
     public static final String CONTENT_TYPE;
@@ -30,6 +34,12 @@ public class ShopContentProvider extends ContentProvider {
     static {
         sURIMatcher.addURI(AUTHORITY, CHOICES_BASE_PATH, CHOICES);
         sURIMatcher.addURI(AUTHORITY, CHOICES_BASE_PATH + "/#", CHOICE_ID);
+        sURIMatcher.addURI(AUTHORITY, PRODUCTS_BASE_PATH, PRODUCTS);
+
+        //for search suggestions
+        sURIMatcher.addURI(AUTHORITY, SearchManager.SUGGEST_URI_PATH_QUERY, SEARCH_SUGGEST);
+        sURIMatcher.addURI(AUTHORITY, SearchManager.SUGGEST_URI_PATH_QUERY + "/*", SEARCH_SUGGEST);
+
         CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/choice";
         CONTENT_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/choices";
     }
@@ -44,18 +54,42 @@ public class ShopContentProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
         queryBuilder.setTables(ChoiceTable.TABLE);
+        Cursor cursor = null;
         int uriType = sURIMatcher.match(uri);
         switch (uriType) {
             case CHOICE_ID:
                 queryBuilder.appendWhere(ChoiceTable.COLUMN_ID + "=" + uri.getLastPathSegment());
-                break;
             case CHOICES:
+                cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
+                break;
+            case SEARCH_SUGGEST:
+            case PRODUCTS:
+                cursor = textSearch(selectionArgs[0], null);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI");
         }
-        Cursor cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
+
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
+        return cursor;
+    }
+
+    public Cursor textSearch(String query, String[] columns) {
+        String selection = ProductTable.COLUMN_NAME + " MATCH ?";
+        String[] selectionArgs = new String[]{query + "*"};
+        return query(selection, selectionArgs, columns);
+    }
+
+    private Cursor query(final String selection, final String[] selectionArgs, final String[] columns) {
+        SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+        queryBuilder.setTables(ProductTable.TABLE_FTS);
+        Cursor cursor = queryBuilder.query(database.getReadableDatabase(), columns, selection, selectionArgs, null, null, null);
+
+        if (cursor == null) return null;
+        if (!cursor.moveToFirst()) {
+            cursor.close();
+            return null;
+        }
         return cursor;
     }
 
@@ -97,11 +131,15 @@ public class ShopContentProvider extends ContentProvider {
             case CHOICES:
                 id = sqlDB.insert(ChoiceTable.TABLE, null, values);
                 break;
+            case PRODUCTS:
+                sqlDB.insert(ProductTable.TABLE, null, values);
+                id = sqlDB.insert(ProductTable.TABLE_FTS, null, values);
+                break;
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);
         }
         getContext().getContentResolver().notifyChange(uri, null);
-        return Uri.parse(CHOICES_BASE_PATH + "/" + id);
+        return Uri.parse(CHOICES_BASE_PATH + "/" + id); //TODO proper return
     }
 
     @Override
@@ -127,5 +165,4 @@ public class ShopContentProvider extends ContentProvider {
         getContext().getContentResolver().notifyChange(uri, null);
         return rowsUpdated;
     }
-
 }

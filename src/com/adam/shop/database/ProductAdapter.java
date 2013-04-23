@@ -2,12 +2,14 @@ package com.adam.shop.database;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.adam.shop.ChooseActivity;
 import com.adam.shop.R;
 
 import java.util.concurrent.Callable;
@@ -31,7 +33,7 @@ public class ProductAdapter extends CursorAdapter {
             holder = new Holder();
             holder.productName = (TextView) view.findViewById(R.id.productName);
             holder.productQuantity = (EditText) view.findViewById(R.id.productQuantity);
-            //holder.checked = (CheckBox) view.findViewById(R.id.purchasedCheckbox);
+            //holder.checked = (CheckBox) view.findViewById(R.id.purchasedCheckbox); TODO: get rid of this?
             holder.nameIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_NAME);
             holder.checkedIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_CHECKED);
             holder.idIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_ID);
@@ -40,18 +42,13 @@ public class ProductAdapter extends CursorAdapter {
             view.setTag(holder);
         }
 
-//        try{ //call the function if possible TODO: move this to a custom view?
-//            holder.callWhenBinding.call();
-//        } catch (Exception e) {
-//        }
-//        holder.callWhenBinding = null;
-
         holder.productName.setText(cursor.getString(holder.nameIndex));
         holder.productId = cursor.getInt(holder.idIndex);
         holder.checked = (cursor.getInt(holder.checkedIndex) != 0);
         if (holder.checked) {
             view.setAlpha(0.6f);
         } else view.setAlpha(1f);
+        Log.d(ChooseActivity.TAG, "Binded view: " + view.getId() + " to Product: " + holder.productName);
     }
 
     @Override
@@ -71,9 +68,5 @@ public class ProductAdapter extends CursorAdapter {
         public TextView productName;
         public EditText productQuantity;
         public Callable<Void> callWhenBinding;
-
-        public void callWhenBinding(Callable<Void> callWhenBinding) {
-            this.callWhenBinding = callWhenBinding;
-        }
     }
 }

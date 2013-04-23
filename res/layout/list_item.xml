@@ -19,7 +19,7 @@
                 android:id="@+id/undoText"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="|  UNDO"
+                android:text="|  DISMISS"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="16dp"
                 android:layout_centerVertical="true"

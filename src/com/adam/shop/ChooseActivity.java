@@ -8,12 +8,15 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
 import com.adam.shop.database.ChoiceTable;
 import com.adam.shop.database.ProductAdapter;
 import com.adam.shop.database.ProductAdapter.Holder;
+import com.adam.shop.database.ProductTable;
 import com.adam.shop.database.ShopContentProvider;
 import com.fortysevendeg.android.swipelistview.BaseSwipeListViewListener;
 import com.fortysevendeg.android.swipelistview.SwipeListView;
@@ -23,6 +26,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     private final boolean isGridView = false;
     private SwipeListView listView;
     private SwipeListView archivedListView;
+    public static final String TAG = "ChooseActivity";
 
     @Override
     protected void onListItemClick(final ListView l, final View v, final int position, final long id) {
@@ -37,6 +41,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         else setContentView(R.layout.line_list);
         listView = (SwipeListView) getListView();
 
+        Log.d(TAG, "Starting Activity");
         fillData();
         setListListener(listView);
         handleIntent(getIntent());
@@ -78,24 +83,27 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         } else if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             // handles a search query
             final String query = intent.getStringExtra(SearchManager.QUERY);
+//            final Uri uri = ShopContentProvider.PRODUCTS_URI;
+//            Cursor c = getContentResolver().query(uri, null, null, new String[]{query}, null);
             add(query);
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(final Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_choose, menu);
-        // Get the SearchView and set the searchable configuration
-        final SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        final SearchView searchView = (SearchView) menu.findItem(R.id.menu_add).getActionView();
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(new ComponentName("com.adam.shop", "com.adam.shop.ChooseActivity")));
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+
+        // Get the SearchView and set the searchable configuration TODO fix the inconsistent search bar.
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false); // Do not iconify the widget;
         searchView.setSubmitButtonEnabled(true); // enable submit
-        // expand it by default
         return true;
     }
 
     private void fillData() {
+        Log.d(TAG, "Filling data");
         getLoaderManager().initLoader(0, null, this);
         adapter = new ProductAdapter(this, null, 0, isGridView);
         AbsListView view;
@@ -110,10 +118,15 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
      * @param name - name of the product we want to add to the list
      */
     private void add(final String name) {
+        Log.d(TAG, "trying to add product: " + name);
         if (TextUtils.isEmpty(name)) return;
         final ContentValues values = new ContentValues();
         values.put(ChoiceTable.COLUMN_NAME, name);
-        getContentResolver().insert(ShopContentProvider.CONTENT_URI, values);
+        getContentResolver().insert(ShopContentProvider.CHOICES_URI, values);
+        final ContentValues ftsValues = new ContentValues();
+        ftsValues.put(ProductTable.COLUMN_NAME, name); //insert to fts
+        getContentResolver().insert(ShopContentProvider.PRODUCTS_URI, ftsValues);
+        Log.d(TAG, "added product: " + name);
         adapter.notifyDataSetChanged();
     }
 
@@ -124,7 +137,8 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
      */
     private void dismiss(final View view) {
         final Holder holder = (Holder) view.getTag();
-        final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
+        final Uri uri = Uri.parse(ShopContentProvider.CHOICES_URI + "/" + holder.productId);
+        Log.d(TAG, "deleting product: " + holder.productName);
         getContentResolver().delete(uri, null, null);
         adapter.notifyDataSetChanged();
     }
@@ -136,7 +150,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
      */
     private void archive(final View view) {
         final Holder holder = (Holder) view.getTag();
-        final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
+        final Uri uri = Uri.parse(ShopContentProvider.CHOICES_URI + "/" + holder.productId);
         final ContentValues values = new ContentValues();
         values.put(ChoiceTable.COLUMN_CHECKED, !holder.checked);
         getContentResolver().update(uri, values, null, null);
@@ -145,7 +159,6 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     public void undo(View view) {
         listView.closeOpenedItems();
     }
-
 
     public void checkBoxCheck(final View view) {
         int pos = listView.getCheckedItemPosition();
@@ -156,7 +169,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         final CheckBox checkBox = (CheckBox) view;
         final RelativeLayout rl = (RelativeLayout) view.getParent();
         final Holder holder = (Holder) rl.getTag();
-        final Uri uri = Uri.parse(ShopContentProvider.CONTENT_URI + "/" + holder.productId);
+        final Uri uri = Uri.parse(ShopContentProvider.CHOICES_URI + "/" + holder.productId);
         final ContentValues values = new ContentValues();
         values.put(ChoiceTable.COLUMN_CHECKED, checkBox.isChecked());
         getContentResolver().update(uri, values, null, null);
@@ -165,10 +178,11 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     // Creates a new loader after the initLoader () call
     @Override
     public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+        Log.d(TAG, "creating Loader");
         final String[] projection = {ChoiceTable.COLUMN_ID, ChoiceTable.COLUMN_NAME, ChoiceTable.COLUMN_QUANTITY, ChoiceTable.COLUMN_CHECKED};
         final String checked = ChoiceTable.COLUMN_CHECKED;
         final String name = ChoiceTable.COLUMN_NAME;
-        return new CursorLoader(this, ShopContentProvider.CONTENT_URI, projection, null, null, checked + ", UPPER(" + name + ")," + name);
+        return new CursorLoader(this, ShopContentProvider.CHOICES_URI, projection, null, null, checked + ", UPPER(" + name + ")," + name);
     }
 
     @Override
@@ -179,6 +193,18 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     @Override
     public void onLoaderReset(final Loader<Cursor> loader) {
         // data is not available anymore, delete reference
+        Log.d(TAG, "resetting Loader");
         adapter.swapCursor(null);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.search:
+                onSearchRequested();
+                return true;
+            default:
+                return false;
+        }
     }
 }
