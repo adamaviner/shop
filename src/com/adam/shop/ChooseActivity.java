@@ -124,7 +124,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         values.put(ChoiceTable.COLUMN_NAME, name);
         getContentResolver().insert(ShopContentProvider.CHOICES_URI, values);
         final ContentValues ftsValues = new ContentValues();
-        ftsValues.put(ProductTable.COLUMN_NAME, name); //insert to fts
+        ftsValues.put(ProductTable.NAME, name); //insert to fts
         getContentResolver().insert(ShopContentProvider.PRODUCTS_URI, ftsValues);
         Log.d(TAG, "added product: " + name);
         adapter.notifyDataSetChanged();

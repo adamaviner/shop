@@ -17,25 +17,25 @@ public class ProductTable {
     public static final String TABLE = "products";
     public static final String TABLE_FTS = "products_fts";
 
-    public static final String COLUMN_ID = BaseColumns._ID;
+    public static final String ID = BaseColumns._ID;
+    public static final String ROW_ID = "rowid";
 
-    public static final String COLUMN_PRODUCT_ID = "productID";
-    public static final String COLUMN_NAME = SearchManager.SUGGEST_COLUMN_TEXT_1;
-    public static final String COLUMN_DESCRIPTION = SearchManager.SUGGEST_COLUMN_TEXT_2;
-    public static final String COLUMN_TREATMENT = "treatment";
-    public static final String COLUMN_CATEGORY = "category";
+    public static final String PRODUCT_ID = "productID";
+    public static final String NAME = SearchManager.SUGGEST_COLUMN_TEXT_1;
+    public static final String DESCRIPTION = SearchManager.SUGGEST_COLUMN_TEXT_2;
+    public static final String TREATMENT = "treatment";
+    public static final String CATEGORY = "category";
+    public static final String QUANTITY = "quantity";
 
     // Database creation SQL statement
-    private static final String productsCreate = "create table " + TABLE + "(" +
-            COLUMN_ID + " integer primary key autoincrement, " + COLUMN_PRODUCT_ID + " integer, " +
-            COLUMN_NAME + " varchar(200), " + COLUMN_DESCRIPTION + " varchar(200), " +
-            COLUMN_TREATMENT + " varchar(200), " + COLUMN_CATEGORY + " varchar(200), unique(" + COLUMN_NAME + "));";
+    private static final String baseCreate = ID + " integer primary key autoincrement, " + PRODUCT_ID + " integer, " +
+            NAME + " varchar(200), " + DESCRIPTION + " varchar(200), " +
+            TREATMENT + " varchar(200), " + CATEGORY + " varchar(200), " +
+            QUANTITY + " integer not null default 0, " +
+            "unique(" + NAME + ", " + DESCRIPTION + "));";
 
-    private static final String productsFTSCreate = "create virtual table " + TABLE_FTS + " using fts3(" +
-            COLUMN_ID + " integer primary key autoincrement, " + COLUMN_PRODUCT_ID + " integer, " +
-            COLUMN_NAME + " varchar(200), " + COLUMN_DESCRIPTION + " varchar(200), " +
-            COLUMN_TREATMENT + " varchar(200), " + COLUMN_CATEGORY + " varchar(200), unique(" + COLUMN_NAME + "));";
-
+    private static final String productsCreate = "create table " + TABLE + "(" + baseCreate;
+    private static final String productsFTSCreate = "create virtual table " + TABLE_FTS + " using fts3(" + baseCreate;
 
     public static void onCreate(SQLiteDatabase database) {
         database.execSQL(productsCreate);

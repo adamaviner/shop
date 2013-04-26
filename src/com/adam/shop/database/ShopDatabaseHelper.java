@@ -30,6 +30,7 @@ public class ShopDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
         ChoiceTable.onCreate(database);
         ProductTable.onCreate(database);
+        loadFoods();
     }
 
     @Override
@@ -42,7 +43,7 @@ public class ShopDatabaseHelper extends SQLiteOpenHelper {
     /**
      * Starts a thread to load the database table with words
      */
-    public void loadFoods() {
+    private void loadFoods() {
         new Thread(new Runnable() {
             public void run() {
                 try {
@@ -65,11 +66,11 @@ public class ShopDatabaseHelper extends SQLiteOpenHelper {
             while ((line = reader.readLine()) != null) {
                 String[] strings = TextUtils.split(line, "~");
                 if (strings.length < 2) continue;
-                long foodID = Long.parseLong(strings[0]);
-                long category = Long.parseLong(strings[2]);
-                String name = strings[4].trim();
-                String desc = strings[5].trim();
-                String treatment = strings[6].trim();
+                long foodID = Long.parseLong(strings[1]);
+                long category = Long.parseLong(strings[3]);
+                String name = strings[5].trim();
+                String desc = strings[6].trim();
+                String treatment = strings[7].trim();
                 boolean wasAdded = addProduct(foodID, category, name, desc, treatment);
                 if (!wasAdded) {
                     Log.e(ChooseActivity.TAG, "unable to add product: " + name);
@@ -88,12 +89,17 @@ public class ShopDatabaseHelper extends SQLiteOpenHelper {
      */
     public boolean addProduct(final long foodID, final long category, final String name, String desc, String treatment) {
         ContentValues initialValues = new ContentValues();
-        initialValues.put(ProductTable.COLUMN_PRODUCT_ID, foodID);
-        initialValues.put(ProductTable.COLUMN_CATEGORY, category);
-        initialValues.put(ProductTable.COLUMN_NAME, name);
-        initialValues.put(ProductTable.COLUMN_DESCRIPTION, desc);
-        initialValues.put(ProductTable.COLUMN_TREATMENT, treatment);
-
+        initialValues.put(ProductTable.PRODUCT_ID, foodID);
+        initialValues.put(ProductTable.CATEGORY, category);
+        initialValues.put(ProductTable.NAME, name);
+        initialValues.put(ProductTable.DESCRIPTION, stripJunk(desc));
+        initialValues.put(ProductTable.TREATMENT, stripJunk(treatment));
+        getWritableDatabase().insert(ProductTable.TABLE, null, initialValues);
         return getWritableDatabase().insert(ProductTable.TABLE_FTS, null, initialValues) != -1;
+    }
+
+    private String stripJunk(String s) {
+        if (s.contains("^")) return "";
+        return s;
     }
 }
