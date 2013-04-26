@@ -26,11 +26,12 @@ public class ProductTable {
     public static final String TREATMENT = "treatment";
     public static final String CATEGORY = "category";
     public static final String QUANTITY = "quantity";
+    private static final String text = " text collate nocase, ";
 
     // Database creation SQL statement
     private static final String baseCreate = ID + " integer primary key autoincrement, " + PRODUCT_ID + " integer, " +
-            NAME + " varchar(200), " + DESCRIPTION + " varchar(200), " +
-            TREATMENT + " varchar(200), " + CATEGORY + " varchar(200), " +
+            NAME + text + DESCRIPTION + text +
+            TREATMENT + text + CATEGORY + text +
             QUANTITY + " integer not null default 0, " +
             "unique(" + NAME + ", " + DESCRIPTION + "));";
 

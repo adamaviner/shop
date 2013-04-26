@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 
 public class ShopDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "todotable.db";
-    private static final int DATABASE_VERSION = 9;
+    private static final int DATABASE_VERSION = 15;
     private final Context context;
 
 
@@ -30,13 +30,13 @@ public class ShopDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase database) {
         ChoiceTable.onCreate(database);
         ProductTable.onCreate(database);
-        loadFoods();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
         ChoiceTable.onUpgrade(database, oldVersion, newVersion);
         ProductTable.onUpgrade(database, oldVersion, newVersion);
+        loadFoods();
     }
 
 
