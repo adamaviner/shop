@@ -79,7 +79,9 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
 
     private void handleIntent(final Intent intent) {
         if (Intent.ACTION_VIEW.equals(intent.getAction())) {
-            // handles a click on a search suggestion; launches activity to show word
+            // handles a click on a search suggestion
+            Uri item = intent.getData();
+            add(item);
         } else if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             // handles a search query
             final String query = intent.getStringExtra(SearchManager.QUERY);
@@ -129,6 +131,18 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         Log.d(TAG, "added product: " + name);
         adapter.notifyDataSetChanged();
     }
+
+    private void add(final Uri itemUri) {
+        Log.d(TAG, "trying to add product by id: " + itemUri);
+        ContentValues values = new ContentValues();
+        Cursor c = getContentResolver().query(itemUri, null, null, null, null);
+        int quantity = c.getInt(c.getColumnIndex(ProductTable.QUANTITY));
+        quantity = quantity == 0 ? 1 : quantity;
+        values.put(ProductTable.QUANTITY, quantity);
+        getContentResolver().update(itemUri, values, null, null);
+        adapter.notifyDataSetChanged();
+    }
+
 
     /**
      * remove product from the list

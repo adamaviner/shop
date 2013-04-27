@@ -9,7 +9,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.text.TextUtils;
+
+import java.util.HashMap;
 
 public class ShopContentProvider extends ContentProvider {
     private ShopDatabaseHelper database;
@@ -65,6 +68,11 @@ public class ShopContentProvider extends ContentProvider {
             case CHOICES:
                 cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
                 break;
+            case PRODUCT_ID:
+                queryBuilder.setTables(ProductTable.TABLE);
+                queryBuilder.appendWhere(ProductTable.ROW_ID + "=" + uri.getLastPathSegment());
+                cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
+                break;
             case SEARCH_SUGGEST:
             case PRODUCTS:
                 cursor = textSearch(selectionArgs[0], null);
@@ -85,6 +93,7 @@ public class ShopContentProvider extends ContentProvider {
     private Cursor query(final String selection, final String[] selectionArgs, final String[] columns) {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
         queryBuilder.setTables(ProductTable.TABLE_FTS);
+        queryBuilder.setProjectionMap(buildProjectionMap());
         Cursor cursor = queryBuilder.query(database.getReadableDatabase(), columns, selection, selectionArgs, null, null, null);
 
         if (cursor == null) return null;
@@ -93,6 +102,21 @@ public class ShopContentProvider extends ContentProvider {
             return null;
         }
         return cursor;
+    }
+
+    private HashMap<String, String> buildProjectionMap() {
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put(ProductTable.NAME, ProductTable.NAME);
+        map.put(ProductTable.QUANTITY, ProductTable.QUANTITY);
+        map.put(ProductTable.DESCRIPTION, ProductTable.DESCRIPTION);
+        map.put(ProductTable.CATEGORY, ProductTable.CATEGORY);
+        map.put(ProductTable.TREATMENT, ProductTable.TREATMENT);
+        map.put(ProductTable.PRODUCT_ID, ProductTable.PRODUCT_ID);
+        map.put(ProductTable.ID, ProductTable.ID);
+        map.put(BaseColumns._ID, "rowid AS " + BaseColumns._ID);
+        map.put(SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID, "rowid AS " + SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID);
+        map.put(SearchManager.SUGGEST_COLUMN_SHORTCUT_ID, "rowid AS " + SearchManager.SUGGEST_COLUMN_SHORTCUT_ID);
+        return map;
     }
 
     @Override
