@@ -132,14 +132,18 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         adapter.notifyDataSetChanged();
     }
 
-    private void add(final Uri itemUri) {
+    private void add(final Uri itemUri) { //TODO the itemUri has an id which is too big by one... Maybe confusion between ROWID and _ID?
         Log.d(TAG, "trying to add product by id: " + itemUri);
         ContentValues values = new ContentValues();
-        Cursor c = getContentResolver().query(itemUri, null, null, null, null);
+        Uri fixedUri = Uri.parse(ShopContentProvider.PRODUCTS_URI + "/" + (Integer.parseInt(itemUri.getLastPathSegment()) - 1));
+        Cursor c = getContentResolver().query(fixedUri, null, null, null, null);
+        String name1 = c.getString(c.getColumnIndex(ProductTable.NAME));
+
+        //END
         int quantity = c.getInt(c.getColumnIndex(ProductTable.QUANTITY));
         quantity = quantity == 0 ? 1 : quantity;
         values.put(ProductTable.QUANTITY, quantity);
-        getContentResolver().update(itemUri, values, null, null);
+        getContentResolver().update(fixedUri, values, null, null);
         adapter.notifyDataSetChanged();
     }
 
@@ -151,9 +155,11 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
      */
     private void dismiss(final View view) {
         final Holder holder = (Holder) view.getTag();
-        final Uri uri = Uri.parse(ShopContentProvider.CHOICES_URI + "/" + holder.productId);
+        final Uri uri = Uri.parse(ShopContentProvider.PRODUCTS_URI + "/" + holder.productId);
         Log.d(TAG, "deleting product: " + holder.productName);
-        getContentResolver().delete(uri, null, null);
+        final ContentValues values = new ContentValues();
+        values.put(ProductTable.QUANTITY, 0);
+        getContentResolver().update(uri, values, null, null);
         adapter.notifyDataSetChanged();
     }
 
@@ -193,11 +199,22 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     @Override
     public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
         Log.d(TAG, "creating Loader");
-        final String[] projection = {ChoiceTable.COLUMN_ID, ChoiceTable.COLUMN_NAME, ChoiceTable.COLUMN_QUANTITY, ChoiceTable.COLUMN_CHECKED};
-        final String checked = ChoiceTable.COLUMN_CHECKED;
-        final String name = ChoiceTable.COLUMN_NAME;
-        return new CursorLoader(this, ShopContentProvider.CHOICES_URI, projection, null, null, checked + ", UPPER(" + name + ")," + name);
+        final String name = ProductTable.NAME;
+        final String quantity = ProductTable.QUANTITY;
+        final String[] selectionArgs = {quantity}; //TODO make this work?
+        final String[] projection = {ProductTable.ID, name, quantity, ProductTable.DESCRIPTION};
+        return new CursorLoader(this, ShopContentProvider.PRODUCTS_URI, projection, "quantity>0", null, name);
     }
+
+//    // Creates a new loader after the initLoader () call
+//    @Override
+//    public Loader<Cursor> onCreateLoader(final int id, final Bundle args) {
+//        Log.d(TAG, "creating Loader");
+//        final String[] projection = {ChoiceTable.COLUMN_ID, ChoiceTable.COLUMN_NAME, ChoiceTable.COLUMN_QUANTITY, ChoiceTable.COLUMN_CHECKED};
+//        final String checked = ChoiceTable.COLUMN_CHECKED;
+//        final String name = ChoiceTable.COLUMN_NAME;
+//        return new CursorLoader(this, ShopContentProvider.CHOICES_URI, projection, null, null, checked + ", UPPER(" + name + ")," + name);
+//    }
 
     @Override
     public void onLoadFinished(final Loader<Cursor> loader, final Cursor data) {

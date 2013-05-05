@@ -33,21 +33,18 @@ public class ProductAdapter extends CursorAdapter {
             holder = new Holder();
             holder.productName = (TextView) view.findViewById(R.id.productName);
             holder.productQuantity = (EditText) view.findViewById(R.id.productQuantity);
-            //holder.checked = (CheckBox) view.findViewById(R.id.purchasedCheckbox); TODO: get rid of this?
-            holder.nameIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_NAME);
-            holder.checkedIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_CHECKED);
-            holder.idIndex = cursor.getColumnIndexOrThrow(ChoiceTable.COLUMN_ID);
+            holder.productDescription = (TextView) view.findViewById(R.id.productDescription);
+            holder.nameIndex = cursor.getColumnIndexOrThrow(ProductTable.NAME);
+            holder.DescriptionIndex = cursor.getColumnIndexOrThrow(ProductTable.DESCRIPTION);
+            holder.idIndex = cursor.getColumnIndexOrThrow(ProductTable.ID);
             holder.checked = false;
             holder.callWhenBinding = null;
             view.setTag(holder);
         }
 
         holder.productName.setText(cursor.getString(holder.nameIndex));
+        holder.productDescription.setText(cursor.getString(holder.DescriptionIndex));
         holder.productId = cursor.getInt(holder.idIndex);
-        holder.checked = (cursor.getInt(holder.checkedIndex) != 0);
-        if (holder.checked) {
-            view.setAlpha(0.6f);
-        } else view.setAlpha(1f);
         Log.d(ChooseActivity.TAG, "Binded view: " + view.getId() + " to Product: " + holder.productName);
     }
 
@@ -60,13 +57,14 @@ public class ProductAdapter extends CursorAdapter {
     }
 
     public static class Holder {
-        public int checkedIndex;
         public int idIndex;
         public int nameIndex;
+        public int DescriptionIndex;
         public int productId;
         public boolean checked;
         public TextView productName;
         public EditText productQuantity;
         public Callable<Void> callWhenBinding;
+        public TextView productDescription;
     }
 }

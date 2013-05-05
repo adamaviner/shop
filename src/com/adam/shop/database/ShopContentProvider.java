@@ -73,14 +73,22 @@ public class ShopContentProvider extends ContentProvider {
                 queryBuilder.appendWhere(ProductTable.ROW_ID + "=" + uri.getLastPathSegment());
                 cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
                 break;
-            case SEARCH_SUGGEST:
             case PRODUCTS:
+                queryBuilder.setTables(ProductTable.TABLE);
+                cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
+                break;
+            case SEARCH_SUGGEST:
                 cursor = textSearch(selectionArgs[0], null);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI");
         }
-        if (cursor != null) cursor.setNotificationUri(getContext().getContentResolver(), uri);
+        if (cursor == null) return null;
+        if (!cursor.moveToFirst()) {
+            cursor.close();
+            return null;
+        }
+        cursor.setNotificationUri(getContext().getContentResolver(), uri);
         return cursor;
     }
 
@@ -96,11 +104,6 @@ public class ShopContentProvider extends ContentProvider {
         queryBuilder.setProjectionMap(buildProjectionMap());
         Cursor cursor = queryBuilder.query(database.getReadableDatabase(), columns, selection, selectionArgs, null, null, null);
 
-        if (cursor == null) return null;
-        if (!cursor.moveToFirst()) {
-            cursor.close();
-            return null;
-        }
         return cursor;
     }
 
