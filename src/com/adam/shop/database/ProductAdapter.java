@@ -43,7 +43,7 @@ public class ProductAdapter extends CursorAdapter {
         }
 
         holder.productName.setText(cursor.getString(holder.nameIndex));
-        holder.productDescription.setText(cursor.getString(holder.DescriptionIndex));
+        holder.productDescription.setText(cursor.getString(holder.DescriptionIndex).toUpperCase());
         holder.productId = cursor.getInt(holder.idIndex);
         Log.d(ChooseActivity.TAG, "Binded view: " + view.getId() + " to Product: " + holder.productName);
     }

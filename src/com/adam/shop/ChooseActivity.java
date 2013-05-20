@@ -135,11 +135,9 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     private void add(final Uri itemUri) { //TODO the itemUri has an id which is too big by one... Maybe confusion between ROWID and _ID?
         Log.d(TAG, "trying to add product by id: " + itemUri);
         ContentValues values = new ContentValues();
-        Uri fixedUri = Uri.parse(ShopContentProvider.PRODUCTS_URI + "/" + (Integer.parseInt(itemUri.getLastPathSegment()) - 1));
+        Uri fixedUri = Uri.parse(ShopContentProvider.PRODUCTS_URI + "/" + (Integer.parseInt(itemUri.getLastPathSegment())));
         Cursor c = getContentResolver().query(fixedUri, null, null, null, null);
-        String name1 = c.getString(c.getColumnIndex(ProductTable.NAME));
-
-        //END
+        String name1 = c.getString(c.getColumnIndex(ProductTable.NAME)); // delete!
         int quantity = c.getInt(c.getColumnIndex(ProductTable.QUANTITY));
         quantity = quantity == 0 ? 1 : quantity;
         values.put(ProductTable.QUANTITY, quantity);
