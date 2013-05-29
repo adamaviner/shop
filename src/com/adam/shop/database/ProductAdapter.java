@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import com.adam.shop.ChooseActivity;
 import com.adam.shop.R;
 
@@ -37,7 +38,6 @@ public class ProductAdapter extends CursorAdapter {
             holder.nameIndex = cursor.getColumnIndexOrThrow(ProductTable.NAME);
             holder.DescriptionIndex = cursor.getColumnIndexOrThrow(ProductTable.DESCRIPTION);
             holder.idIndex = cursor.getColumnIndexOrThrow(ProductTable.ID);
-            holder.checked = false;
             holder.callWhenBinding = null;
             view.setTag(holder);
         }
@@ -45,7 +45,7 @@ public class ProductAdapter extends CursorAdapter {
         holder.productName.setText(cursor.getString(holder.nameIndex));
         holder.productDescription.setText(cursor.getString(holder.DescriptionIndex).toUpperCase());
         holder.productId = cursor.getInt(holder.idIndex);
-        Log.d(ChooseActivity.TAG, "Binded view: " + view.getId() + " to Product: " + holder.productName);
+        Log.d(ChooseActivity.TAG, "Bound view: " + view.getId() + " to Product: " + holder.productName.getText());
     }
 
     @Override
@@ -61,7 +61,6 @@ public class ProductAdapter extends CursorAdapter {
         public int nameIndex;
         public int DescriptionIndex;
         public int productId;
-        public boolean checked;
         public TextView productName;
         public EditText productQuantity;
         public Callable<Void> callWhenBinding;

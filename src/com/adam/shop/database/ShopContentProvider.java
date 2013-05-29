@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
+import android.provider.BaseColumns;
 import android.text.TextUtils;
 
 import java.util.HashMap;
@@ -77,7 +78,7 @@ public class ShopContentProvider extends ContentProvider {
                 cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case SEARCH_SUGGEST:
-                cursor = textSearch(selectionArgs[0], null);
+                cursor = textSearch(uri.getLastPathSegment().toLowerCase(), null);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI");
@@ -115,6 +116,7 @@ public class ShopContentProvider extends ContentProvider {
         map.put(ProductTable.TREATMENT, ProductTable.TREATMENT);
         map.put(ProductTable.PRODUCT_ID, ProductTable.PRODUCT_ID);
         map.put(ProductTable.ID, ProductTable.ID);
+        map.put(BaseColumns._ID, "rowid AS " + BaseColumns._ID);
         map.put(SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID, "rowid AS " + SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID);
         map.put(SearchManager.SUGGEST_COLUMN_SHORTCUT_ID, "rowid AS " + SearchManager.SUGGEST_COLUMN_SHORTCUT_ID);
         return map;

@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.adam.shop.ChooseActivity;
 import com.adam.shop.R;
 
@@ -17,7 +18,7 @@ import java.io.InputStreamReader;
 
 public class ShopDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "todotable.db";
-    private static final int DATABASE_VERSION = 15;
+    private static final int DATABASE_VERSION = 16;
     private final Context context;
 
 
