@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 
 public class ShopDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "todotable.db";
-    private static final int DATABASE_VERSION = 16;
+    private static final int DATABASE_VERSION = 18;
     private final Context context;
 
 
@@ -95,6 +95,8 @@ public class ShopDatabaseHelper extends SQLiteOpenHelper {
         initialValues.put(ProductTable.NAME, name);
         initialValues.put(ProductTable.DESCRIPTION, stripJunk(desc));
         initialValues.put(ProductTable.TREATMENT, stripJunk(treatment));
+        initialValues.put(ProductTable.QUANTITY, 0);
+        initialValues.put(ProductTable.POPULARITY, 0);
         getWritableDatabase().insert(ProductTable.TABLE, null, initialValues);
         return getWritableDatabase().insert(ProductTable.TABLE_FTS, null, initialValues) != -1;
     }

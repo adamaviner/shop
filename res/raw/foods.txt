@@ -1,0 +1,398 @@
+~01001~^~0100~^~Butter~Salted~^~^~BUTTER,WITH SALT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01002~^~0100~^~Butter~Salted~Whipped~^~BUTTER,WHIPPED,WITH SALT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01003~^~0100~^~Butter oil~^~^~^~BUTTER OIL,ANHYDROUS~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01004~^~0100~^~Blue cheese~^~^~^~CHEESE,BLUE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01005~^~0100~^~Brick cheese~^~^~^~CHEESE,BRICK~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01006~^~0100~^~Brie~Cheese~^~^~CHEESE,BRIE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01007~^~0100~^~Camembert~Cheese~^~^~CHEESE,CAMEMBERT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01008~^~0100~^~Caraway~Cheese~^~^~CHEESE,CARAWAY~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01009~^~0100~^~Cheddar~Cheese~^~^~CHEESE,CHEDDAR~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01010~^~0100~^~Cheshire~Cheese~^~^~CHEESE,CHESHIRE~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01011~^~0100~^~Colby~Chesse~^~^~CHEESE,COLBY~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01012~^~0100~^~Cottage~Cheese~Creamed~^~CHEESE,COTTAGE,CRMD,LRG OR SML CURD~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01013~^~0100~^~Cottage~Cheese with fruits~Creamed~^~CHEESE,COTTAGE,CRMD,W/FRUIT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01014~^~0100~^~Cottage~Cheese~Non-fat~^~CHEESE,COTTAGE,NONFAT,UNCRMD,DRY,LRG OR SML CURD~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01015~^~0100~^~Cottage~Cheese~2% fat~^~CHEESE,COTTAGE,LOWFAT,2% MILKFAT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01016~^~0100~^~Cottage~Cheese~1% fat~^~CHEESE,COTTAGE,LOWFAT,1% MILKFAT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01017~^~0100~^~Cream cheese~^~^~^~CHEESE,CREAM~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01018~^~0100~^~Edam~Cheese~^~^~CHEESE,EDAM~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01019~^~0100~^~Feta~Cheese~^~^~CHEESE,FETA~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01020~^~0100~^~Fontina~Cheese~^~^~CHEESE,FONTINA~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01021~^~0100~^~Gjetost~Cheese~^~^~CHEESE,GJETOST~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01022~^~0100~^~Gouda~Cheese~^~^~CHEESE,GOUDA~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01023~^~0100~^~Gruyere~Cheese~^~^~CHEESE,GRUYERE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01024~^~0100~^~Limburger~Cheese~^~^~CHEESE,LIMBURGER~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01025~^~0100~^~Monterey~Cheese~^~^~CHEESE,MONTEREY~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01026~^~0100~^~Mozzarella~Cheese~^~^~CHEESE,MOZZARELLA,WHL MILK~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01027~^~0100~^~Mozzarella~Cheese~Low moisture~^~CHEESE,MOZZARELLA,WHL MILK,LO MOIST~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01028~^~0100~^~Mozzarella~Cheese, part skim milk~^~^~CHEESE,MOZZARELLA,PART SKIM MILK~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01029~^~0100~^~Mozzarella~Cheese, part skim milk~Low moisture~^~CHEESE,MOZZARELLA,PART SKIM MILK,LO MOIST~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01030~^~0100~^~Muenster~Cheese~^~^~CHEESE,MUENSTER~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01031~^~0100~^~Neufchatel~Cheese~^~^~CHEESE,NEUFCHATEL~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01032~^~0100~^~Parmesan~Cheese~Grated~^~CHEESE,PARMESAN,GRATED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01033~^~0100~^~Parmesan~Cheese~^~^~CHEESE,PARMESAN,HARD~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01034~^~0100~^~Port de salut~Cheese~^~^~CHEESE,PORT DE SALUT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01035~^~0100~^~Provolone~Cheese~^~^~CHEESE,PROVOLONE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01036~^~0100~^~Ricotta~Cheese~^~^~CHEESE,RICOTTA,WHOLE MILK~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01037~^~0100~^~Ricotta~Cheese, part skim milk~^~^~CHEESE,RICOTTA,PART SKIM MILK~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01038~^~0100~^~Romano~Cheese~^~^~CHEESE,ROMANO~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01039~^~0100~^~Roquefort~Cheese~^~^~CHEESE,ROQUEFORT~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01040~^~0100~^~Swiss~Cheese~^~^~CHEESE,SWISS~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01041~^~0100~^~Tilsit~Cheese~^~^~CHEESE,TILSIT~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01042~^~0100~^~American cheese~^~Pasteurized process, fortified with vitamin d~^~CHEESE,PAST PROCESS,AMERICAN,FORT W/ VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01043~^~0100~^~Pimento~Cheese~Pasteurized~^~CHEESE,PAST PROCESS,PIMENTO~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01044~^~0100~^~Swiss cheese~^~Pasteurized process~^~CHEESE,PAST PROCESS,SWISS~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01048~^~0100~^~American cheese~Spread~Pasteurized process~^~CHEESE SPRD,PAST PROCESS,AMERICAN~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01049~^~0100~^~Half and half~^~^~^~CREAM,FLUID,HALF AND HALF~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01050~^~0100~^~Light cream~^~^~^~CREAM,FLUID,LT (COFFEE CRM OR TABLE CRM)~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01052~^~0100~^~Light whipping cream~^~^~^~CREAM,FLUID,LT WHIPPING~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01053~^~0100~^~Heavy cream~^~^~^~CREAM,FLUID,HVY WHIPPING~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01054~^~0100~^~Whipped cream~^~Pressurized~^~CREAM,WHIPPED,CRM TOPPING,PRESSURIZED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01055~^~0100~^~Sour cream~Reduced fat~Cultured~^~CREAM,SOUR,RED FAT,CULTURED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01056~^~0100~^~Sour cream~^~Cultured~^~CREAM,SOUR,CULTURED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01057~^~0100~^~Eggnog~^~^~^~EGGNOG~^~~^~~^~Y~^~~^0^~~^6.37^4.27^8.79^3.90
+~01059~^~0100~^~Milk~^~^~^~MILK,FILLED,FLUID,W/BLEND OF HYDR VEG OILS~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01067~^~0100~^~Cream Substitute~^~^~^~CREAM SUB,LIQ,W/HYDR VEG OIL&SOY PROT~^~~^~~^~Y~^~~^0^~~^5.71^4.27^8.79^3.87
+~01069~^~0100~^~Cream Substitute~Powder~^~^~CREAM SUBSTITUTE,POWDERED~^~~^~~^~Y~^~~^0^~~^6.29^4.27^8.79^3.87
+~01070~^~0100~^~Desert topping~Powder~^~^~DESSERT TOPPING,POWDERED~^~~^~~^~~^~~^0^~~^6.29^4.27^8.79^3.87
+~01072~^~0100~^~Dessert topping~^~Pressurized~^~DESSERT TOPPING,PRESSURIZED~^~~^~~^~Y~^~~^0^~~^6.29^4.27^8.79^3.87
+~01073~^~0100~^~Dessert topping~^~Frozen~^~DESSERT TOPPING,SEMI SOLID,FRZ~^~~^~~^~Y~^~~^0^~~^6.29^4.27^8.84^3.87
+~01074~^~0100~^~Sour cream~Imitation~^~^~SOUR CRM,IMITN,CULTURED~^~~^~~^~Y~^~~^0^~~^6.29^4.27^8.79^3.87
+~01076~^~0100~^~Milk substitutes~^~^~^~MILK SUBSTITUTES,FLUID,W/LAURIC ACID OIL~^~~^~~^~~^~~^0^~~^6.29^4.27^8.79^3.87
+~01077~^~0100~^~Milk~Whole~3.25% fat~^~MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01079~^~0100~^~Milk~Reduced fat~2% fat~^~MILK,RED FAT,FLUID,2% MILKFAT,W/ ADDED VIT A & VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01082~^~0100~^~Milk~Lowfat~1% fat~^~MILK,LOWFAT,FLUID,1% MILKFAT,W/ ADDED VIT A & VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01085~^~0100~^~Milk~Nonfat~0% fat~^~MILK,NONFAT,FLUID,W/ ADDED VIT A & VIT D (FAT FREE OR SKIM)~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01088~^~0100~^~Buttermilk~Low Fat~^~^~MILK,BTTRMLK,FLUID,CULTURED,LOWFAT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01090~^~0100~^~Milk~Dry~^~^~MILK,DRY,WHL,W/ ADDED VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01091~^~0100~^~Milk~Dry~Nonfat~^~MILK,DRY,NONFAT,REG,WO/ ADDED VIT A & VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01094~^~0100~^~Buttermilk~Dry~^~^~MILK,BUTTERMILK,DRIED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01095~^~0100~^~Canned milk~Condensed, Sweetened~^~^~MILK,CND,COND,SWTND~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01096~^~0100~^~Canned milk~Evaporated~^~^~MILK,CND,EVAP,W/ ADDED VITAMIN D & WO/ ADDED VIT A~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01097~^~0100~^~Canned milk~Evaporated~Nonfat~^~MILK,CND,EVAP,NONFAT,W/ ADDED VIT A & VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01102~^~0100~^~Chocolate milk~Whole~^~^~MILK,CHOC,FLUID,COMM,WHL,W/ ADDED VIT A & VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01103~^~0100~^~Chocolate milk~Reduced fat~^~^~MILK,CHOC,FLUID,COMM,RED FAT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01104~^~0100~^~Chocolate milk~lowfat~^~^~MILK,CHOC,FLUID,COMM,LOWFAT,W/ ADDED VIT A & VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01106~^~0100~^~Goat milk~^~^~^~MILK,GOAT,FLUID,W/ ADDED VITAMIN D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01108~^~0100~^~Buffalo milk~Indian~^~^~MILK,INDIAN BUFFALO,FLUID~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01109~^~0100~^~Sheep milk~^~^~^~MILK,SHEEP,FLUID~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01112~^~0100~^~Whey~^~^~^~WHEY,ACID,FLUID~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01113~^~0100~^~Whey~Dry~^~^~WHEY,ACID,DRIED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01114~^~0100~^~Sweet whey~^~^~^~WHEY,SWEET,FLUID~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01115~^~0100~^~Sweet whey~Dry~^~^~WHEY,SWEET,DRIED~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01116~^~0100~^~Yogurt~Whole~^~^~YOGURT,PLN,WHL MILK,8 GRAMS PROT PER 8 OZ~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01117~^~0100~^~Yogurt~Low fat~^~^~YOGURT,PLN,LOFAT,12 GRAMS PROT PER 8 OZ~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01118~^~0100~^~Yogurt~Skim~^~^~YOGURT,PLN,SKIM MILK,13 GRAMS PROT PER 8 OZ~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01119~^~0100~^~Vanilla yogurt~Low fat~^~^~YOGURT,VANILLA,LOFAT,11 GRAMS PROT PER 8 OZ~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01120~^~0100~^~Fruit yogurt~Low fat~^~^~YOGURT,FRUIT,LOFAT,9 GRAMS PROT PER 8 OZ~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01123~^~0100~^~Egg~^~Raw~^~EGG,WHL,RAW,FRSH~^~~^~~^~Y~^~Shell~^12^~~^6.25^4.36^9.02^3.68
+~01133~^~0100~^~Egg~Dry~^~^~EGG,WHOLE,DRIED~^~~^~~^~Y~^~~^0^~~^6.25^4.36^9.02^3.68
+~01137~^~0100~^~Egg yolk~Dry~^~^~EGG,YOLK,DRIED~^~~^~~^~Y~^~~^0^~~^6.25^4.36^9.02^3.68
+~01138~^~0100~^~Duck egg~^~Raw~^~EGG,DUCK,WHOLE,FRESH,RAW~^~~^~~^~Y~^~Shell~^12^~~^6.25^4.36^9.02^3.68
+~01139~^~0100~^~Goose egg~^~Raw~^~EGG,GOOSE,WHOLE,FRESH,RAW~^~~^~~^~Y~^~Shell~^13^~~^6.25^4.36^9.02^3.68
+~01140~^~0100~^~Quail egg~^~Raw~^~EGG,QUAIL,WHOLE,FRESH,RAW~^~~^~~^~Y~^~Shell~^8^~~^6.25^4.36^9.02^3.68
+~01141~^~0100~^~Turkey egg~^~Raw~^~EGG,TURKEY,WHL,FRSH,RAW~^~~^~~^~~^~Shell~^12^~~^6.25^4.36^9.02^3.68
+~01144~^~0100~^~Egg substitute~Powder~^~^~EGG SUBSTITUTE,POWDER~^~~^~~^~Y~^~~^0^~~^6.25^4.36^9.02^3.87
+~01145~^~0100~^~Butter~No salt~^~^~BUTTER,WITHOUT SALT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01146~^~0100~^~Parmesan cheese~Shredded~^~^~CHEESE,PARMESAN,SHREDDED~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01153~^~0100~^~Canned milk~Evaporated~^~^~MILK,CND,EVAP,W/ VIT A~^~~^~~^~~^~~^0^~~^6.38^4.27^8.79^3.87
+~01156~^~0100~^~Goat cheese~Hard~^~^~CHEESE,GOAT,HARD TYPE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01157~^~0100~^~Goat cheese~Semisoft~^~^~CHEESE,GOAT,SEMISOFT TYPE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01159~^~0100~^~Goat cheese~Soft~^~^~CHEESE,GOAT,SOFT TYPE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01161~^~0100~^~Mozzarella cheese~Substitute~^~^~CHEESE SUB,MOZZARELLA~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01165~^~0100~^~Añejo cheese~Mexican, queso añejo ~^~^~CHEESE,MEXICAN,QUESO ANEJO~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01166~^~0100~^~Asadero cheese~Mexican, queso asadero~^~^~CHEESE,MEXICAN,QUESO ASADERO~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01167~^~0100~^~Chihuahua cheese~Mexican, queso chihuahua~^~^~CHEESE,MEXICAN,QUESO CHIHUAHUA~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01168~^~0100~^~Cheddar chesse~Low fat~^~^~CHEESE,LOFAT,CHEDDAR OR COLBY~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01173~^~0100~^~Egg white~Dry~^~^~EGG,WHITE,DRIED~^~~^~~^~Y~^~~^0^~~^6.25^4.36^9.02^3.68
+~01178~^~0100~^~Sour cream~Reduced fat~^~^~SOUR CREAM,REDUCED FAT~^~~^~~^~Y~^~~^0^~~^^^^
+~01179~^~0100~^~Sour cream~Light~^~^~SOUR CREAM,LIGHT~^~~^~~^~Y~^~~^0^~~^^^^
+~01180~^~0100~^~Sour cream~Nonfat~^~^~SOUR CREAM,FAT FREE~^~~^~~^~Y~^~~^0^~~^^^^
+~01182~^~0100~^~Cheddar Cheese~Reduced fat~^~^~USDA COMMODITY,CHS,CHEDDAR,RED FAT~^~~^~~^~Y~^~~^0^~~^^^^
+~01186~^~0100~^~Cream cheese~Nonfat~^~^~CHEESE,CREAM,FAT FREE~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01187~^~0100~^~Chocolate yogurt ~Nonfat~^~^~YOGURT,CHOC,NONFAT MILK~^~~^~~^~Y~^~~^0^~~^^^^
+~01188~^~0100~^~Cheez whiz~Pasteurized process cheese sauce~^~^~KRAFT CHEEZ WHIZ PAST PROCESS CHS SAU~^~~^~~^~~^~~^0^~~^^^^
+~01189~^~0100~^~Cheez whiz light~Pasteurized process cheese sauce~^~^~KRAFT CHEEZ WHIZ LT PAST PROCESS CHS PRODUCT~^~~^~~^~~^~~^0^~~^^^^
+~01195~^~0100~^~Strawberry yogurt ~1% milkfat~^~^~KRAFT BREYERS LOWFAT STRAWBERRY YOGURT (1% MILKFAT)~^~~^~~^~~^~~^0^~~^^^^
+~01199~^~0100~^~Half and half~Nonfat~^~^~CREAM,HALF & HALF,FAT FREE~^~~^~~^~Y~^~~^0^~~^6.38^^^
+~01202~^~0100~^~Chocolate milk~Reduced fat~^~^~MILK,CHOC,FLUID,COMM,RED FAT,W/ ADDED CA~^~~^~~^~~^~~^0^~~^^^^
+~01203~^~0100~^~Fruit yogurt~Lowfat~^~^~YOGURT,FRUIT,LOFAT,W/LO CAL SWEETENER~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01204~^~0100~^~Parmesan cheese~Reduced fat, grated~^~^~CHEESE,PARMESAN,DRY GRATED,RED FAT~^~~^~~^~Y~^~~^0^~~^^^^
+~01205~^~0100~^~Cream Substitute~Flavored~Liquid~^~CREAM SUB,FLAV,LIQ~^~~^~~^~Y~^~~^0^~~^^^^
+~01206~^~0100~^~Cream Substitute~Flavored~Powdered~^~CREAM SUB,FLAV,PDR~^~~^~~^~Y~^~~^0^~~^6.38^^^
+~01208~^~0100~^~Provolone cheese~Reduced fat~^~^~CHEESE,PROVOLONE,RED FAT~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01209~^~0100~^~Mexican cheese~Blend, reduced fat~^~^~CHEESE,MEXICAN,BLEND,RED FAT~^~~^~~^~Y~^~~^0^~~^^^^
+~01210~^~0100~^~Egg mix~^~^~^~EGG MIX,USDA CMDTY~^~~^~~^~~^~~^0^~~^6.25^4.36^9.02^3.68
+~01218~^~0100~^~Fruit yogurt~Nonfat~^~^~YOGURT,FRUIT VAR,NONFAT,FORT W/ VITAMIN D~^~~^~~^~Y~^~~^0^~~^^^^
+~01220~^~0100~^~Vanilla yogurt~Low fat~^~^~YOGURT,VANILLA,LOFAT,11 GRAMS PROT PER 8 OZ,FORT W/ VIT D~^~~^~~^~Y~^~~^0^~~^6.38^4.27^8.79^3.87
+~01221~^~0100~^~Vanilla yogurt~Nonfat~^~^~YOGURT,VAN/LEM FLAV,NONFAT MILK,W/ LO-CAL SWTNR,FORT W/VIT D~^~~^~~^~Y~^~~^0^~~^^^^
+~01222~^~0100~^~Chocolate yogurt~Nonfat~^~^~YOGURT,CHOC,NONFAT MILK,FORT W/ VITAMIN D~^~~^~~^~Y~^~~^0^~~^^^^
+~01223~^~0100~^~Protein supplement~Milk based~Powder~^~PROTEIN SUPP,MILK BSD,MUSCLE MILK,PDR~^~~^~~^~Y~^~~^0^~~^6.38^^^
+~01225~^~0100~^~Dulce de leche~^~^~^~DULCE DE LECHE~^~~^~~^~Y~^~~^0^~~^^^^
+~01226~^~0100~^~Egg substitute~Nonfat~Liquid or frozen~^~EGG SUB,LIQ OR FRZ,FAT FREE~^~~^~~^~Y~^~~^0^~~^6.25^4.36^8.84^3.68
+~01227~^~0100~^~White Cheese~Dry, Queso Seco~^~^~CHEESE,DRY WHITE,QUESO SECO~^~~^~~^~~^~~^0^~~^^^^
+~01228~^~0100~^~Fresh cheese~Queso fresco~^~^~CHEESE,FRSH,QUESO FRESCO~^~~^~~^~Y~^~~^0^~~^^^^
+~01229~^~0100~^~White cheese~Queso blanco~^~^~CHEESE,WHITE,QUESO BLANCO~^~~^~~^~~^~~^0^~~^^^^
+~01230~^~0100~^~Buttermilk~Whole~^~^~MILK,BTTRMLK,FLUID,WHL~^~~^~~^~Y~^~~^0^~~^^^^
+~01237~^~0100~^~Ice cream bar~Chocolate covered~^~^~ICE CRM,BAR OR STK,CHOC COVERED~^~~^~~^~Y~^~~^0^~~^^^^
+~01238~^~0100~^~Ice cream sandwich~^~^~^~ICE CRM SNDWCH~^~~^~~^~Y~^~~^0^~~^^^^
+~01239~^~0100~^~Ice cream cookie sandwich~^~^~^~ICE CRM COOKIE SNDWCH~^~~^~~^~Y~^~~^0^~~^^^^
+~01240~^~0100~^~Ice cream cone~Chocolate covered, nuts~^~^~ICE CRM CONE,CHOC COVERED,W/ NUTS,FLAVORS OTHER THAN CHOC~^~~^~~^~Y~^~~^0^~~^6.25^^^
+~01243~^~0100~^~Ice cream~Nonfat~^~^~FAT FREE ICE CRM,NO SUGAR ADDED,FLAVORS OTHER THAN CHOC~^~~^~~^~Y~^~~^0^~~^^^^
+~01244~^~0100~^~Milk dessert bar~Lowfat~^~^~MILK DSSRT BAR,FRZ,MADE FROM LOWFAT MILK~^~~^~~^~Y~^~~^0^~~^^^^
+~01256~^~0100~^~Greek yogurt~Nonfat~^~^~YOGURT,GREEK,PLN,NONFAT~^~~^~~^~Y~^~~^0^~~^^^^
+~02001~^~0200~^~Allspice~^~^~^~ALLSPICE,GROUND~^~~^~~^~~^~~^0^~Pimenta dioica~^6.25^3.36^8.37^2.35
+~02002~^~0200~^~Anise seed~^~^~^~ANISE SEED~^~~^~~^~~^~~^0^~Pimpinella anisum~^6.25^3.36^8.37^2.90
+~02003~^~0200~^~Basil~Dry~^~^~SPICES,BASIL,DRIED~^~~^~~^~Y~^~~^0^~Ocimum basilicum~^6.25^2.44^8.37^3.00
+~02004~^~0200~^~Bay leaf~^~^~^~SPICES,BAY LEAF~^~~^~~^~~^~~^0^~Laurus nobilis~^6.25^2.44^8.37^3.00
+~02005~^~0200~^~Caraway seed~^~^~^~CARAWAY SEED~^~~^~~^~Y~^~~^0^~Carum carvi~^6.25^3.36^8.37^2.90
+~02006~^~0200~^~Cardamom~^~^~^~SPICES,CARDAMOM~^~~^~~^~~^~~^0^~Elettaria cardamomum~^6.25^3.36^8.37^3.20
+~02007~^~0200~^~Celery seed~^~^~^~CELERY SEED~^~~^~~^~Y~^~~^0^~Apium graveolens~^6.25^3.36^8.37^2.90
+~02008~^~0200~^~Chervil~Dry~^~^~CHERVIL,DRIED~^~~^~~^~~^~~^0^~Anthriscus cerefolium~^6.25^2.44^8.37^3.00
+~02009~^~0200~^~Chili~Powder~^~^~CHILI POWDER~^~~^~~^~Y~^~~^0^~~^6.25^3.23^8.37^2.39
+~02010~^~0200~^~Cinnamon~^~Ground~^~CINNAMON,GROUND~^~Cassia~^~~^~Y~^~~^0^~Cinnamomum aromaticum~^6.25^1.82^8.37^2.85
+~02011~^~0200~^~Cloves~^~Ground~^~CLOVES,GROUND~^~~^~~^~Y~^~~^0^~Syzygium aromaticum~^6.25^1.82^8.37^2.35
+~02012~^~0200~^~Coriander leaf~Dry~^~^~CORIANDER LEAF,DRIED~^~Chinese parsley, cilantro~^~~^~Y~^~~^0^~Coriandrum sativum~^6.25^2.44^8.37^3.57
+~02013~^~0200~^~Coriander seed~^~^~^~CORIANDER SEED~^~~^~~^~~^~~^0^~Coriandrum sativum~^6.25^3.36^8.37^1.95
+~02014~^~0200~^~Cumin seed~^~^~^~CUMIN SEED~^~~^~~^~Y~^~~^0^~Cuminum cyminum~^6.25^3.36^8.37^2.90
+~02015~^~0200~^~Curry~Powder~^~^~CURRY POWDER~^~~^~~^~Y~^~~^0^~~^6.18^3.12^8.37^2.92
+~02016~^~0200~^~Dell seed~^~^~^~DILL SEED~^~~^~~^~~^~~^0^~Anethum graveolens~^6.25^3.36^8.37^2.35
+~02017~^~0200~^~Dill weed~Dry~^~^~DILL WEED,DRIED~^~~^~~^~~^~~^0^~Anethum graveolens~^6.25^2.44^8.37^3.00
+~02018~^~0200~^~Fennel seed~^~^~^~FENNEL SEED~^~~^~~^~~^~~^0^~Foeniculum vulgare~^6.25^3.36^8.37^3.20
+~02019~^~0200~^~Fenugreek seed~^~^~^~FENUGREEK SEED~^~~^~~^~~^~~^0^~Trigonella foenum-graecum~^5.30^3.47^8.37^3.25
+~02020~^~0200~^~Garlic~Powder~^~^~GARLIC POWDER~^~~^~~^~Y~^~~^0^~Allium sativum~^6.25^2.78^8.37^3.84
+~02021~^~0200~^~Ginger~^~Ground~^~GINGER,GROUND~^~~^~~^~Y~^~~^0^~Zingiber officinale~^6.25^2.78^8.37^3.84
+~02022~^~0200~^~Mace~^~Ground~^~MACE,GROUND~^~~^~~^~~^~~^0^~Myristica fragrans~^6.25^3.36^8.37^3.60
+~02023~^~0200~^~Marjoram~Dry~^~^~MARJORAM,DRIED~^~~^~~^~Y~^~~^0^~Origanum majorana~^6.25^2.44^8.37^3.00
+~02024~^~0200~^~Mustard seed~^~Ground~^~SPICES,MUSTARD SD,GROUND~^~~^~~^~Y~^~~^0^~Sinapis alba and Brassica juncea~^5.40^3.47^8.37^4.07
+~02025~^~0200~^~Nutmeg~^~Ground~^~NUTMEG,GROUND~^~~^~~^~Y~^~~^0^~Myristica fragrans~^5.30^3.47^8.37^4.07
+~02026~^~0200~^~Onion~Powder~^~^~ONION POWDER~^~~^~~^~Y~^~~^0^~Allium cepa~^6.25^2.78^8.37^3.84
+~02027~^~0200~^~Oregano~Dry~^~^~SPICES,OREGANO,DRIED~^~~^~~^~Y~^~~^0^~Origanum vulgare~^6.25^2.44^8.37^3.00
+~02028~^~0200~^~Paprika~^~^~^~PAPRIKA~^~~^~~^~Y~^~~^0^~Capsicum annuum~^6.25^3.36^8.37^2.35
+~02029~^~0200~^~Parsley~Dry~^~^~PARSLEY,DRIED~^~~^~~^~Y~^~~^0^~Petroselinum crispum~^6.25^2.44^8.37^3.57
+~02030~^~0200~^~Black Pepper~^~Ground~^~PEPPER,BLACK~^~~^~~^~Y~^~~^0^~Piper nigrum~^5.35^1.83^8.37^3.20
+~02031~^~0200~^~Red pepper~^~Ground~^~PEPPER,RED OR CAYENNE~^~~^~~^~Y~^~~^0^~Capsicum frutescens or Capsicum annuum~^6.25^3.36^8.37^2.35
+~02032~^~0200~^~White pepper~^~Ground~^~PEPPER,WHITE~^~~^~~^~~^~~^0^~Piper nigrum~^5.35^1.83^8.37^3.78
+~02033~^~0200~^~Poppy seed~^~^~^~POPPY SEED~^~~^~~^~Y~^~~^0^~Papaver somniferum~^5.30^3.47^8.37^4.07
+~02034~^~0200~^~Poultry seasoning~^~^~^~POULTRY SEASONING~^~~^~~^~Y~^~~^0^~~^5.89^2.36^8.37^3.38
+~02035~^~0200~^~Pumpkin pie spice~^~^~^~PUMPKIN PIE SPICE~^~~^~~^~Y~^~~^0^~~^6.06^2.50^8.37^3.19
+~02036~^~0200~^~Rosemary~Dry~^~^~ROSEMARY,DRIED~^~~^~~^~~^~~^0^~Rosmarinus officinalis~^6.25^2.44^8.37^3.00
+~02037~^~0200~^~Saffron~^~^~^~SAFFRON~^~~^~~^~~^~~^0^~Crocus sativus~^6.25^2.44^8.37^3.57
+~02038~^~0200~^~Sage~^~Ground~^~SAGE,GROUND~^~~^~~^~Y~^~~^0^~Salvia officinalis~^6.25^2.44^8.37^3.00
+~02039~^~0200~^~Savory~^~Ground~^~SAVORY,GROUND~^~~^~~^~~^~~^0^~Satureja hortensis~^6.25^2.44^8.37^3.00
+~02041~^~0200~^~Tarragon~Dry~^~^~SPICES,TARRAGON,DRIED~^~~^~~^~~^~~^0^~Artemisia dracunculus~^6.25^2.44^8.37^3.57
+~02042~^~0200~^~Thyme~Dry~^~^~SPICES,THYME,DRIED~^~~^~~^~Y~^~~^0^~Thymus vulgaris~^6.25^2.44^8.37^3.00
+~02043~^~0200~^~Turmeric~^~Ground~^~TURMERIC,GROUND~^~~^~~^~Y~^~~^0^~Curcuma longa L.~^6.25^2.78^8.37^3.84
+~02044~^~0200~^~Basil~Fresh~^~^~BASIL,FRESH~^~~^~~^~Y~^~Tough stems, flower heads and trimmings~^36^~Ocimum basilicum~^6.25^2.44^8.37^3.57
+~02045~^~0200~^~Dill weed~Fresh~^~^~DILL WEED,FRSH~^~~^~~^~~^~Tough stems and trimmings~^41^~Anethum graveolens~^6.25^2.44^8.37^3.57
+~02046~^~0200~^~Yellow mustard~^~^~^~MUSTARD,PREPARED,YELLOW~^~~^~~^~Y~^~~^0^~~^6.25^3.47^8.37^3.34
+~02047~^~0200~^~Table salt~^~^~^~SALT,TABLE~^~~^~~^~Y~^~~^0^~~^0.00^^^
+~02048~^~0200~^~Vinegar cider~^~^~^~VINEGAR,CIDER~^~~^~~^~Y~^~~^0^~~^0.00^^^
+~02049~^~0200~^~Thyme~Fresh~^~^~THYME,FRSH~^~~^~~^~~^~Stems~^32^~Thymus vulgaris~^6.25^2.44^8.37^3.00
+~02050~^~0200~^~Vanilla extract~^~^~^~VANILLA EXTRACT~^~~^~~^~~^~~^0^~~^6.25^2.44^8.37^3.90
+~02053~^~0200~^~Distilled vinegar~^~^~^~VINEGAR,DISTILLED~^~~^~~^~Y~^~~^0^~~^^^^
+~02054~^~0200~^~Canned capers~^~^~^~CAPERS,CANNED~^~~^~~^~Y~^~~^0^~Capparis spinosa~^6.25^1.82^8.37^2.35
+~02055~^~0200~^~Horseradish~^~^~^~HORSERADISH,PREPARED~^~~^~~^~Y~^~~^0^~~^6.25^2.78^8.37^3.44
+~02063~^~0200~^~Rosemary~Fresh~^~^~ROSEMARY,FRESH~^~~^~~^~~^~Stems~^35^~Rosmarinus officinalis~^6.25^2.44^8.37^3.57
+~02064~^~0200~^~Peppermint~Fresh~^~^~PEPPERMINT,FRESH~^~mint~^~~^~~^~Stems~^39^~Mentha x piperita L. nothosubsp. piperita~^6.25^2.44^8.37^3.57
+~02065~^~0200~^~Spearmint~Fresh~^~^~SPEARMINT,FRESH~^~mint~^~~^~~^~Stems~^59^~Mentha spicata~^6.25^2.44^8.37^3.57
+~02066~^~0200~^~Spearmint~Dry~^~^~SPEARMINT,DRIED~^~mint~^~~^~~^~~^0^~~^6.25^2.44^8.37^3.57
+~02068~^~0200~^~Red wine vinegar~^~^~^~VINEGAR,RED WINE~^~~^~~^~~^~~^0^~~^6.25^^^
+~02069~^~0200~^~Balsamic vinegar~^~^~^~VINEGAR,BALSAMIC~^~~^~~^~~^~~^0^~~^^^^
+~03001~^~0300~^~Juice Treats~fruit medley~^~^~BABYFOOD,JUC TREATS,FRUIT MEDLEY,TODD~^~~^~~^~Y~^~~^0^~~^^^^
+~03002~^~0300~^~Strained beef~^~^~^~BABYFOOD,MEAT,BF,STR~^~~^~~^~Y~^~~^0^~~^6.25^^^
+~03003~^~0300~^~Junior beef~^~^~^~BABYFOOD,MEAT,BF,STR~^~~^~~^~Y~^~~^0^~~^6.25^^^
+~03005~^~0300~^~Strained veal~^~^~^~BABYFOOD,MEAT,VEAL,STR~^~~^~~^~Y~^~~^0^~~^^^^
+~03007~^~0300~^~Strained pork~^~^~^~BABYFOOD,MEAT,PORK,STR~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^
+~03008~^~0300~^~Strained ham~^~^~^~BABYFOOD,MEAT,HAM,STR~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^
+~03009~^~0300~^~Junior ham~^~^~^~BABYFOOD,MEAT,HAM,JUNIOR~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^
+~03010~^~0300~^~Strained lamb~^~^~^~BABYFOOD,MEAT,LAMB,STR~^~~^~~^~Y~^~~^0^~~^^^^
+~03011~^~0300~^~Junior lamb~^~^~^~BABYFOOD,MEAT,LAMB,JUNIOR~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^
+~03012~^~0300~^~Strained chicken~^~^~^~BABYFOOD,MEAT,CHICK,STR~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^
+~03013~^~0300~^~Junior chicken~^~^~^~BABYFOOD,MEAT,CHICK,JR~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^
+~03014~^~0300~^~Junior chicken sticks~^~^~^~BABYFOOD,MEAT,CHICK STKS,JR~^~~^~~^~Y~^~~^0^~~^6.25^4.00^8.70^2.70
+~03015~^~0300~^~Strained turkey~^~^~^~BABYFOOD,MEAT,TURKEY,STR~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^
+~03016~^~0300~^~Junior turkey~^~^~^~BABYFOOD,MEAT,TURKEY,JR~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^
+~03017~^~0300~^~Junior turkey sticks~^~^~^~Babyfood, meat, turkey sticks, junior~^~~^~~^~Y~^~~^0^~~^6.25^^^
+~03019~^~0300~^~Fruit strips~Gerber graduates~^~^~GERBER GRADUATES FRUIT STRIPS REAL FRUIT BARS~^~~^~~^~Y~^~~^0^~~^^^^
+~03021~^~0300~^~Junior meat sticks~^~^~^~BABYFOOD,MEAT,MEAT STKS,JR~^~~^~~^~Y~^~~^0^~~^6.25^4.00^8.70^2.70
+~04001~^~0400~^~Beef Tallow~^~^~^~FAT,BEEF TALLOW~^~~^~~^~Y~^~~^0^~~^0.00^^9.02^
+~04002~^~0400~^~Lard~^~^~^~LARD~^~~^~~^~Y~^~~^0^~~^0.00^^9.02^
+~04011~^~0400~^~Mayo light mayonnaise~Salad dressing~^~^~SALAD DRSNG,KRAFT MAYO LT MAYO~^~~^~Kraft Foods, Inc.~^~~^~~^0^~~^^^^
+~04013~^~0400~^~Mayonnaise dressing~Nonfat~^~^~SALAD DRSNG,KRAFT MAYO FAT FREE MAYO DRSNG~^~~^~~^~~^~~^0^~~^^^^
+~04015~^~0400~^~Russian dressing~^~^~^~SALAD DRSNG,RUSSIAN DRSNG~^~~^~~^~Y~^~~^0^~~^6.25^3.40^8.84^3.80
+~04016~^~0400~^~Sesame seed dressing~^~^~^~SALAD DRSNG,SESAME SD DRSNG,REG~^~~^~~^~Y~^~~^0^~~^6.25^4.03^8.84^3.80
+~04017~^~0400~^~Thousand island~^~^~^~SALAD DRSNG,1000 ISLAND,COMM,REG~^~~^~~^~Y~^~~^0^~~^6.25^4.03^8.84^3.80
+~04018~^~0400~^~Mayonnaise dressing~Regular~^~^~SALAD DRSNG,MAYO TYPE,REG,W/SALT~^~~^~~^~Y~^~~^0^~~^6.25^4.36^8.84^3.80
+~04020~^~0400~^~French dressing~Reduced fat~^~^~SALAD DRSNG,FRENCH DRSNG,RED FAT~^~~^~~^~Y~^~~^0^~~^6.25^2.44^8.84^3.80
+~04021~^~0400~^~Italian dressing~Reduced fat~^~^~SALAD DRSNG,ITALIAN DRSNG,COMM,RED FAT~^~~^~~^~Y~^~~^0^~~^^^^
+~04022~^~0400~^~Russian dressing ~Low clorie~^~^~SALAD DRSNG,RUSSIAN DRSNG,LO CAL~^~~^~~^~Y~^~~^0^~~^6.25^2.44^8.84^3.80
+~04023~^~0400~^~Thousand island dressing~Reduced fat~^~^~SALAD DRSNG,1000 ISLAND DRSNG,RED FAT~^~~^~~^~Y~^~~^0^~~^6.25^3.90^8.84^3.80
+~04027~^~0400~^~Mayonnaise dressing~Imitation, soybean~^~^~SALAD DRSNG,MAYO,IMITN,SOYBN~^~~^~~^~Y~^~~^0^~~^6.25^4.36^8.84^3.80
+~04028~^~0400~^~Mayonnaise dressing~Imitation, milk cream~^~^~SALAD DRSNG,MAYO,IMITN,MILK CRM~^~~^~~^~~^~~^0^~~^6.25^4.36^8.84^3.80
+~04031~^~0400~^~Soybean shortening~^~^~^~SHORTENING,HOUSEHOLD,PARTIALLY HYDROG SOYBN -COTTONSEED~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04034~^~0400~^~Soybean oil~^~^~^~OIL,SOYBN,SALAD OR COOKING,(PARTIALLY HYDROGENATED)~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04037~^~0400~^~Rice bran oil~^~^~^~OIL,RICE BRAN~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04038~^~0400~^~Wheat germ oil~^~^~^~OIL,WHEAT GERM~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04042~^~0400~^~Peanut oil~^~^~^~OIL,PNUT,SALAD OR COOKING~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04047~^~0400~^~Coconut oil~^~^~^~OIL,COCNT~^~~^~~^~Y~^~~^0^~~^0.00^^8.62^
+~04053~^~0400~^~Olive oil~^~^~^~OIL,OLIVE,SALAD OR COOKING~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04055~^~0400~^~Palm oil~^~^~^~OIL,PALM~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04058~^~0400~^~Sesame oil~^~^~^~OIL,SESAME,SALAD OR COOKING~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04060~^~0400~^~Sunflower oil~^~^~^~OIL,SUNFLOWER,LINOLEIC (LESS THAN 60%)~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04073~^~0400~^~Soybean margarine~Hard~^~^~MARGARINE,REG,HARD,SOYBN (HYDR)~^~~^~~^~~^~~^0^~~^6.38^4.27^8.84^3.87
+~04114~^~0400~^~Italian Dressing~^~^~^~SALAD DRSNG,ITALIAN DRSNG,COMM,REG~^~~^~~^~Y~^~~^0^~~^^^^
+~04120~^~0400~^~French dressing ~^~^~^~SALAD DRSNG,FRENCH DRSNG,COMM,REG~^~~^~~^~Y~^~~^0^~~^6.25^2.44^8.84^3.80
+~04128~^~0400~^~Margarine-like~^~^~^~VEG OIL SPRD,UNSPEC OILS,APPROX 37% FAT,W/ SALT~^~~^~~^~Y~^~~^0^~~^^4.27^8.84^3.80
+~04141~^~0400~^~French dressing~No salt~^~^~SALAD DRSNG,FRENCH DRSNG,COMM,REG,WO/ SALT~^~~^~~^~~^~~^0^~~^6.25^4.36^8.84^3.80
+~04142~^~0400~^~French Dressing~reduced fat, no salt~^~^~SALAD DRSNG,FRENCH DRSNG,RED FAT,WO/ SALT~^~~^~~^~~^~~^0^~~^6.25^4.36^8.84^3.80
+~04143~^~0400~^~Italian dressing~No salt~^~^~SALAD DRSNG,ITALIAN DRSNG,COMM,REG,WO/ SALT~^~~^~~^~~^~~^0^~~^6.25^4.36^8.84^3.80
+~04144~^~0400~^~Italian dressing~Reduced fat, no salt~^~^~SALAD DRSNG,ITALIAN DRSNG,RED FAT,WO/ SALT~^~~^~~^~~^~~^0^~~^6.25^4.36^8.84^3.80
+~04367~^~0400~^~French dressing~Nonfat~^~^~SALAD DRSNG,FRENCH DRSNG,FAT-FREE~^~~^~~^~Y~^~~^0^~~^^^^
+~04501~^~0400~^~Cocoa butter oil~^~^~^~OIL,COCOA BUTTER~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04502~^~0400~^~Cottonseed oil~^~^~^~OIL,CTTNSD,SALAD OR COOKING~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04506~^~0400~^~Sunflower oil~^~^~^~OIL,SUNFLOWER,LINOLEIC,(APPROX. 65%)~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04510~^~0400~^~Safflower oil~^~^~^~OIL,SAFFLOWER,SALAD OR COOKING,LINOLEIC,(OVER 70%)~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04513~^~0400~^~Palm kernel oil~^~^~^~VEGETABLE OIL,PALM KERNEL~^~~^~~^~Y~^~~^0^~~^0.00^^8.62^
+~04514~^~0400~^~Poppyseed oil~^~^~^~OIL,POPPYSEED~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04515~^~0400~^~Tomatoseed oil~^~^~^~OIL,TOMATOSEED~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04516~^~0400~^~Teaseed oil~^~^~^~OIL,TEASEED~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04517~^~0400~^~Grapeseed oil~^~^~^~OIL,GRAPESEED~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04518~^~0400~^~Corn oil~^~^~^~OIL,CORN,INDUSTRIAL & RTL,ALLPURP SALAD OR COOKING~^~~^~~^~Y~^~~^0^~~^^^^
+~04520~^~0400~^~Mutton tallow~^~^~^~FAT,MUTTON TALLOW~^~~^~~^~Y~^~~^0^~~^0.00^^9.02^
+~04528~^~0400~^~Walnut oil~^~^~^~OIL,WALNUT~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04529~^~0400~^~Almond oil~^~^~^~OIL,ALMOND~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04530~^~0400~^~Apricot kernel oil~^~^~^~OIL,APRICOT KERNEL~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04532~^~0400~^~Hazelnut oil~^~^~^~OIL,HAZELNUT~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04534~^~0400~^~Babassu oil~^~^~^~OIL,BABASSU~^~~^~~^~~^~~^0^~~^0.00^^8.82^
+~04536~^~0400~^~Sheanut oil~^~^~^~OIL,SHEANUT~^~~^~~^~~^~~^0^~~^0.00^^8.62^
+~04539~^~0400~^~Blue cheese dressing~^~^~^~SALAD DRSNG,BLUE OR ROQUEFORT CHS DRSNG,COMM,REG~^~~^~~^~Y~^~~^0^~~^6.25^4.36^8.84^3.80
+~04541~^~0400~^~Cupu assu oil~^~^~^~OIL,CUPU ASSU~^~~^~~^~~^~~^0^~~^0.00^^8.62^
+~04542~^~0400~^~Chicken fat~^~^~^~FAT,CHICKEN~^~~^~~^~Y~^~~^0^~~^0.00^^9.02^
+~04559~^~0400~^~Sybean shortening~^~^~^~SHORTENING HOUSEHOLD SOYBN (HYDR)&PALM~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04572~^~0400~^~Nutmeg butter~^~^~^~OIL,NUTMEG BUTTER~^~~^~~^~~^~~^0^~~^0.00^^8.62^
+~04573~^~0400~^~Uchhuba butter~^~^~^~OIL,UCUHUBA BUTTER~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04574~^~0400~^~Duck fat~^~^~^~FAT,DUCK~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04575~^~0400~^~Turket fat~^~^~^~FAT,TURKEY~^~~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04576~^~0400~^~Goose fat~^~^~^~FAT,GOOSE~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04581~^~0400~^~Avocado oil~^~^~^~OIL,AVOCADO~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04582~^~0400~^~Canola oil~^~^~^~OIL,CANOLA~^~low erucic acid rapeseed oil~^~~^~Y~^~~^0^~~^0.00^^8.84^
+~04583~^~0400~^~Mustard oil~^~^~^~OIL,MUSTARD~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04588~^~0400~^~Oat oil~^~^~^~OIL,OAT~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04589~^~0400~^~Fish oil~Cod Liver~^~^~FISH OIL,COD LIVER~^~~^~~^~~^~~^0^~~^0.00^^9.02^
+~04590~^~0400~^~Fish oil~Herring~^~^~FISH OIL,HERRING~^~~^~~^~~^~~^0^~~^0.00^^9.02^
+~04591~^~0400~^~Fish oil~Menhaden~^~^~FISH OIL,MENHADEN~^~~^~~^~~^~~^0^~~^0.00^^9.02^
+~04593~^~0400~^~Fish oil ~Salmon~^~^~FISH OIL,SALMON~^~~^~~^~~^~~^0^~~^0.00^^9.02^
+~04594~^~0400~^~Fish oil~Sardine~^~^~FISH OIL,SARDINE~^~~^~~^~~^~~^0^~~^0.00^^9.02^
+~04601~^~0400~^~Butter~Light, salt~^~^~BUTTER,LT,STK,W/SALT~^~~^~~^~Y~^~~^0^~~^^^^
+~04602~^~0400~^~Butter~Light, no salt~^~^~BUTTER,LT,STK,WO/SALT~^~~^~~^~Y~^~~^0^~~^^^^
+~04606~^~0400~^~Meat drippings~^~^~^~MEAT DRIPPINGS (LARD,BF TALLOW,MUTTON TALLOW)~^~~^~~^~Y~^~~^0^~~^^^^
+~04609~^~0400~^~Bacon grease~^~^~^~ANIMAL FAT,BACON GREASE~^~~^~~^~Y~^~~^0^~~^^^^
+~04610~^~0400~^~Margarine~Salt, 80% fat~^~^~MARGARINE,REG,80% FAT,COMP,STK,W/ SALT~^~~^~~^~Y~^~~^0^~~^^4.27^8.84^3.87
+~04612~^~0400~^~Margarine-like~Salt, 60% fat~^~^~MARGARINE-LIKE,VEG OIL SPRD,60% FAT,STK,W/ SALT~^~~^~~^~Y~^~~^0^~~^6.25^3.87^8.84^4.27
+~04615~^~0400~^~Vegerable shortening~^~^~^~SHORTENING,VEG,HOUSEHOLD,COMP~^~~^~~^~Y~^~~^0^~~^6.25^^8.84^
+~04617~^~0400~^~Margarine~No salt, 80% fat~^~^~MARGARINE,REG,80% FAT,COMP,STK,WO/ SALT~^~~^~~^~Y~^~~^0^~~^^^^
+~04620~^~0400~^~Margarine-like~No salt, 60% fat~^~^~VEG OIL SPRD,60% FAT,STICK/TUB/BOTTLE,WO/ SALT~^~~^~~^~Y~^~~^0^~~^6.25^3.87^8.84^4.27
+~04624~^~0400~^~Margarine-like~Salt, nonfat~^~^~MARGARINE-LIKE,VEG OIL SPRD,FAT FREE,LIQ,W/ SALT~^~~^~~^~Y~^~~^0^~~^^4.27^8.84^3.87
+~04626~^~0400~^~Margarine-like with yogurt~Salt, 70% fat~^~^~MARGARINE-LIKE SPRD W/ YOGURT,70% FAT,STK,W/ SALT~^~~^~~^~Y~^~~^0^~~^^^^
+~04627~^~0400~^~Margarine-like with yogurt~Salt, 40% fat~^~^~MARGARINE-LIKE SPRD W/ YOGURT,APPROX 40% FAT,TUB,W/ SALT~^~~^~~^~Y~^~~^0^~~^^^^
+~04630~^~0400~^~Margarine spread~^~^~^~MARGARINE SPRD,APPROX 48% FAT,TUB~^~~^~~^~~^~~^0^~~^6.38^4.27^8.84^3.87
+~04633~^~0400~^~Margarine-like spread~Salt, 20% fat~^~^~MARGARINE-LIKE,VEG OIL SPRD,20% FAT,W/ SALT~^~~^~~^~Y~^~~^0^~~^0.00^^9.02^
+~04634~^~0400~^~Margarine-like spread~No salt, 20% fat~^~^~MARGARINE-LIKE,VEG OIL SPRD,20% FAT,WO/ SALT~^~~^~~^~Y~^~~^0^~~^^^^
+~04638~^~0400~^~Ranch dressing~Nonfat~^~^~SALAD DRSNG,RANCH DRSNG,FAT-FREE~^~~^~~^~~^~~^0^~~^^4.36^8.84^3.80
+~04639~^~0400~^~Ranch dressing~^~^~^~SALAD DRSNG,RANCH DRSNG,COMM,REG~^~~^~~^~Y~^~~^0^~~^^4.36^8.84^3.80
+~04640~^~0400~^~Ranch dressing~Reduced fat~^~^~SALAD DRSNG,RANCH DRSNG,RED FAT~^~~^~~^~~^~~^0^~~^^4.36^8.84^3.80
+~04641~^~0400~^~D~^~^~^~SALAD DRSNG,MAYO,LT~^~lite mayonnaise~^~~^~Y~^~~^0^~~^^^^
+~04669~^~0400~^~Refined soybean oil~^~^~^~USDA CMDTY FD,OIL,VEG,SOYBN,REFINED~^~~^~~^~~^~~^0^~~^0.00^^8.84^
+~04679~^~0400~^~PAM cooking spray~^~^~^~OIL,PAM COOKING SPRAY,ORIGINAL~^~~^~ConAgra, Inc.~^~~^~~^0^~~^6.25^^^
+~04686~^~0400~^~Honey mustard dressing~Reduced calorie~^~^~SALAD DRSNG,HONEY MUSTARD DRSNG,RED CAL~^~~^~~^~Y~^~~^0^~~^^^^
+~04688~^~0400~^~Spray salad dressing~^~^~^~SALAD DRSNG,SPRAY-STYLE DRSNG,ASSORTED FLAVORS~^~~^~~^~~^~~^0^~~^^^^
+~04703~^~0400~^~Honey mustard dressing~^~^~^~SALAD DRSNG,HONEY MUSTARD,REG~^~~^~~^~Y~^~~^0^~~^^^^
+~04704~^~0400~^~Creamy poppyseed dressing~^~^~^~SALAD DRSNG,POPPYSEED,CREAMY~^~~^~~^~Y~^~~^0^~~^^^^
+~04705~^~0400~^~Caesar dressing~Nonfat~^~^~SALAD DRSNG,CAESAR,FAT-FREE~^~~^~~^~Y~^~~^0^~~^^^^
+~04706~^~0400~^~Honey mustard dressing~Nonfat~^~^~DRESSING,HONEY MUSTARD,FAT-FREE~^~~^~~^~Y~^~~^0^~~^^^^
+~04707~^~0400~^~Flaxseed oil~^~^~^~OIL,FLAXSEED,CONTAINS ADDED SLICED FLAXSEED~^~~^~~^~~^~~^0^~~^5.30^^8.84^
+~05006~^~0500~^~Chicken~Whole~Raw~^~CHICKEN,BROILERS OR FRYERS,MEAT & SKN,RAW~^~~^~~^~Y~^~Bone~^32^~~^6.25^4.27^9.02^3.87
+~05020~^~0500~^~Chicken~Giblets~Raw~^~CHICKEN,BROILERS OR FRYERS,GIBLETS,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05023~^~0500~^~Chicken~Gizzard~Raw~^~CHICKEN,GIZZARD,ALL CLASSES,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05025~^~0500~^~Chicken~Heart~Raw~^~CHICKEN,HEART,ALL CLASSES,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05027~^~0500~^~Chicken~Liver~Raw~^~CHICKEN,LIVER,ALL CLASSES,RAW~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^3.87
+~05057~^~0500~^~Chicken~Breast~Raw~^~CHICKEN,BROILERS OR FRYERS,BREAST,MEAT&SKN,RAW~^~~^~~^~Y~^~Bone~^20^~~^6.25^4.27^9.02^3.87
+~05066~^~0500~^~Chicken~Drumstick~Raw~^~CHICKEN,BROILERS OR FRYERS,DRUMSTK,MEAT&SKN,RAW~^~~^~~^~Y~^~Bone and cartilage 33%~^33^~~^6.25^4.27^9.02^3.87
+~05075~^~0500~^~Chicken~Leg~Raw~^~CHICKEN,BROILERS OR FRYERS,LEG,MEAT&SKN,RAW~^~~^~~^~Y~^~Bone~^27^~~^6.25^4.27^9.02^3.87
+~05084~^~0500~^~Chicken~Neck~Raw~^~CHICKEN,BROILERS OR FRYERS,NECK,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^36^~~^6.25^4.27^9.02^3.87
+~05091~^~0500~^~Chicken~Thigh~Raw~^~CHICKEN,BROILERS OR FRYERS,THIGH,MEAT&SKN,RAW~^~~^~~^~Y~^~Bone and cartilage 15%~^15^~~^6.25^4.27^9.02^3.87
+~05100~^~0500~^~Chicken~Wing~Raw~^~CHICKEN,BROILERS OR FRYERS,WING,MEAT&SKN,RAW~^~~^~~^~Y~^~Bone~^46^~~^6.25^4.27^9.02^3.87
+~05139~^~0500~^~Duck~Whole~Raw~^~DUCK,DOMESTICATED,MEAT&SKN,RAW~^~~^~~^~Y~^~Bone~^28^~Anas platyrhynchos~^6.25^4.27^9.02^3.87
+~05143~^~0500~^~Duck~Liver~Raw~^~DUCK,DOMESTICATED,LIVER,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05146~^~0500~^~Goose~Whole~Raw~^~GOOSE,DOMESTICATED,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^19^~Anser anser~^6.25^4.27^9.02^3.87
+~05150~^~0500~^~Goose~Liver~Raw~^~GOOSE,LIVER,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05151~^~0500~^~Guinea hen~Whole~Raw~^~GUINEA HEN,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^17^~Numida meleagris~^6.25^4.27^9.02^3.87
+~05153~^~0500~^~Pheasant~Whole~Raw~^~PHEASANT,RAW,MEAT&SKN~^~~^~~^~~^~Bone~^14^~Phasianus colchicus~^6.25^4.27^9.02^3.87
+~05157~^~0500~^~Quail~Whole~Raw~^~QUAIL,MEAT AND SKIN,RAW~^~~^~~^~~^~Bone~^10^~Coturnix spp. and Colinus spp.~^6.25^4.27^9.02^3.87
+~05160~^~0500~^~Squab (pigeon)~Whole~Raw~^~SQUAB,(PIGEON),MEAT&SKN,RAW~^~~^~~^~~^~Bone~^23^~Columba spp.~^6.25^4.27^9.02^3.87
+~05162~^~0500~^~Squab (pigeon)~Without skin~Raw~^~SQUAB,(PIGEON),LT MEAT WO/SKN,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05165~^~0500~^~Turkey~Whole~Raw~^~TURKEY,WHL,MEAT & SKN,RAW~^~~^~~^~Y~^~Bone and connective tissue 29%~^29^~~^6.25^4.27^9.02^3.87
+~05171~^~0500~^~Turkey~Giblets~Raw~^~TURKEY,WHL,GIBLETS,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05173~^~0500~^~Turkey~Gizzard~Raw~^~TURKEY,GIZZARD,ALL CLASSES,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05175~^~0500~^~Turkey~Heart~Raw~^~TURKEY,HEART,ALL CLASSES,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05177~^~0500~^~Turkey~Liver~Raw~^~TURKEY,LIVER,ALL CLASSES,RAW~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05189~^~0500~^~Turkey~Back~Raw~^~TURKEY,ALL CLASSES,BACK,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^40^~~^6.25^4.27^9.02^3.87
+~05191~^~0500~^~Turkey~Breast~Raw~^~TURKEY,ALL CLASSES,BREAST,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^10^~~^6.25^4.27^9.02^3.87
+~05193~^~0500~^~Turkey~Leg~Raw~^~TURKEY,ALL CLASSES,LEG,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^17^~~^6.25^4.27^9.02^3.87
+~05195~^~0500~^~Turkey~Wing~Raw~^~TURKEY,ALL CLASSES,WING,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^33^~~^6.25^4.27^9.02^3.87
+~05229~^~0500~^~Turkey~Young, whole~Raw~^~TURKEY,YOUNG HEN,MEAT&SKN&GIBLETS&NECK,RAW~^~~^~~^~~^~Bone~^22^~~^6.25^4.27^9.02^3.87
+~05282~^~0500~^~Pate de foie gras~Goose liver pate~Canned, smoked~^~PATE DE FOIE GRAS,CND (GOOSE LIVER PATE),SMOKED~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05300~^~0500~^~Turkey sticks~^~Breaded, battered, fried~^~TURKEY STKS,BREADED,BATTERED,FRIED~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05305~^~0500~^~Ground turkey~^~Raw~^~Poultry food products, ground turkey, raw~^~~^~~^~~^~~^0^~~^^^^
+~05307~^~0500~^~Chicken~Conish game hens~Raw~^~CHICKEN,CORNISH GAME HENS,MEAT&SKN,RAW~^~~^~~^~~^~Bone~^39^~~^6.25^4.27^9.02^3.87
+~05311~^~0500~^~Canned chicken~No broth~Canned~^~CHICKEN,CANNED,NO BROTH~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^3.87
+~05321~^~0500~^~Chicken nuggets~^~Frozen, cooked~^~CHICKEN NUGGETS,FRZ,CKD~^~~^~~^~Y~^~~^0^~~^^^^
+~05324~^~0500~^~Chicken patty~^~Frozen, cooked~^~CHICKEN PATTY,FRZ,CKD~^~~^~~^~~^~~^0^~~^^^^
+~05327~^~0500~^~Chicken~Breast tenders~Breaded. raw~^~CHICKEN BREAST TENDERS,BREADED,UNCKD~^~~^~~^~~^~~^0^~~^6.25^4.27^9.02^3.87
+~05332~^~0500~^~Ground Chicken~^~Raw, ground~^~CHICKEN,GROUND,RAW~^~~^~~^~~^~~^0^~~^6.25^^^
+~05335~^~0500~^~Chicken~Feet~Boiled~^~CHICK,FEET,BOILED~^~~^~~^~Y~^~~^0^~~^6.25^4.27^9.02^3.87
+~05621~^~0500~^~Ground emu~^~Raw, ground~^~EMU,GROUND,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05623~^~0500~^~Emu~Fan fillet~Raw~^~EMU,FAN FILLET,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05625~^~0500~^~Emu~Flat fillet~Raw~^~EMU,FLAT FILLET,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05626~^~0500~^~Emu~Full rump~Raw~^~EMU,FULL RUMP,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05628~^~0500~^~Emu~Inside drum~Raw~^~EMU,INSIDE DRUM,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05630~^~0500~^~Emu~Outside drum~Raw~^~EMU,OUTSIDE DRUM,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05631~^~0500~^~Emu~Oyster~Raw~^~EMU,OYSTER,RAW~^~~^~~^~~^~~^0^~Dromaius novaehollandiae~^6.25^4.27^9.02^3.87
+~05641~^~0500~^~Ground Ostrich~^~Raw, ground~^~OSTRICH,GROUND,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05643~^~0500~^~Ostrich~Fan fillet~Raw~^~OSTRICH,FAN,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05644~^~0500~^~Ostrich~Inside leg~Raw~^~OSTRICH,INSIDE LEG,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05646~^~0500~^~Ostrich~Inside strip~Raw~^~OSTRICH,INSIDE STRIP,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05648~^~0500~^~Ostrich~Outside leg~Raw~^~OSTRICH,OUTSIDE LEG,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05649~^~0500~^~Ostrich~Outside strip~Raw~^~OSTRICH,OUTSIDE STRIP,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05651~^~0500~^~Ostrich~Oyster~Raw~^~OSTRICH,OYSTER,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05653~^~0500~^~Ostrich~Round~Raw~^~OSTRICH,RND,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05654~^~0500~^~Ostrich~Tenderloin~Raw~^~OSTRICH,TENDERLOIN,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05655~^~0500~^~Ostrich~Tip trimmed~Raw~^~OSTRICH,TIP RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05657~^~0500~^~Ostrich~Top loin~Raw~^~OSTRICH,TOP LOIN,RAW~^~~^~~^~~^~~^0^~Struthio camelus~^6.25^4.27^9.02^3.87
+~05662~^~0500~^~Ground turkey~Non-fat~Raw~^~GROUND TURKEY,FAT FREE,RAW~^~~^~~^~~^~~^0^~~^^^^
+~06001~^~0600~^~Soup~Cream of asparagus~Canned, condensed~^~SOUP,CRM OF ASPARAGUS,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^3.90^8.80^3.90
+~06002~^~0600~^~Soup~Black bean~Canned condensed~^~SOUP,BLACK BEAN,CND,COND~^~~^~~^~~^~~^0^~~^6.25^3.70^8.90^4.00
+~06003~^~0600~^~Soup~Beffy mushroom~Condensed~^~CAMPBELL'S RED & WHITE,BEEFY MUSHROOM SOUP,COND~^~~^~Campbell Soup Co.~^~~^~~^0^~~^^^^
+~06004~^~0600~^~Soup~Bean with pork~Canned, condensed~^~SOUP,BEAN W/ PORK,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^3.70^8.90^4.00
+~06006~^~0600~^~Soup~Bean with frankfurters~Canned, condensed~^~SOUP,BEAN W/ FRANKFURTERS,CND,COND~^~~^~~^~~^~~^0^~~^6.25^3.70^8.90^4.00
+~06007~^~0600~^~Soup~Bean with ham~Canned, chunky~^~SOUP,BEAN W/ HAM,CND,CHUNKY,RTS~^~~^~~^~~^~~^0^~~^6.25^3.70^8.90^4.00
+~06008~^~0600~^~Soup~Beef broth or bouillon~Canned~^~SOUP,BF BROTH OR BOUILLON CND,RTS~^~~^~~^~Y~^~~^0^~~^6.25^4.00^9.00^4.00
+~06009~^~0600~^~Soup~Beef noodle~Canned, condesned~^~SOUP,BF NOODLE,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.10^8.90^4.10
+~06010~^~0600~^~Soup~Cream of celery~Canned, condensed~^~SOUP,CRM OF CELERY,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^3.90^8.80^3.90
+~06011~^~0600~^~Soup~Cheese~Canned, condensed~^~SOUP,CHS,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.10^8.80^3.90
+~06012~^~0600~^~Soup~Chicken with dumplings~Canned, condensed~^~SOUP,CHICK W/ DUMPLINGS,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.10^8.90^4.10
+~06013~^~0600~^~Soup~Chicken broth~Canned, condensed~^~SOUP,CHICK BROTH,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.20^9.00^4.00
+~06014~^~0600~^~Soup~Broccoli cheese~Canned, condensed~^~CAMPBELL'S RED & WHITE,BROCCOLI CHS SOUP,COND~^~~^~Campbell Soup Co.~^~~^~~^0^~~^^^^
+~06015~^~0600~^~Soup~Chicken~Canned, chunky~^~SOUP,CHICK,CND,CHUNKY,RTS~^~~^~~^~Y~^~~^0^~~^6.25^4.10^8.80^3.90
+~06016~^~0600~^~Soup~Cream of chicken~Canned, condensed~^~SOUP,CRM OF CHICK,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.00^9.00^4.00
+~06017~^~0600~^~Soup~Chicken gumbo~Canned, condensed~^~SOUP,CHICK GUMBO,CND,COND~^~~^~~^~~^~~^0^~~^6.25^3.80^9.00^4.00
+~06018~^~0600~^~Soup~Chunky chicken noodle~Canned~^~SOUP,CHUNKY CHICK NOODLE,CND,RTS~^~~^~~^~Y~^~~^0^~~^6.25^4.00^9.00^4.00
+~06019~^~0600~^~Soup~Chicken noodle~Canned, condensed~^~SOUP,CHICK NOODLE,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.00^9.00^4.00
+~06022~^~0600~^~Soup~Chicken rice~Canned, chunky~^~SOUP,CHICK RICE,CND,CHUNKY,RTS~^~~^~~^~Y~^~~^0^~~^6.25^3.80^9.00^4.00
+~06023~^~0600~^~Soup~Chicken with rice~Canned, condensed~^~SOUP,CHICK W/ RICE,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.00^9.00^4.00
+~06024~^~0600~^~Soup~Chicken vegetable~Canned, chunky~^~SOUP,CHICK VEG,CHUNKY,CND,RTS~^~~^~~^~~^~~^0^~~^6.25^4.10^8.80^3.90
+~06025~^~0600~^~Soup~Chicken vegetable~Canned, condensed~^~SOUP,CHICK VEG,CND,COND~^~~^~~^~Y~^~~^0^~~^6.25^4.10^8.80^3.90
+~06026~^~0600~^~Soup~Chili beef~Canned, condensed~^~SOUP,CHILI BF,CND,COND~^~~^~~^~~^~~^0^~~^6.25^3.70^8.90^4.00
+~06027~^~0600~^~Soup~Clam chowder~Canned, chunky~^~SOUP,CLAM CHOWDER,MANHATTAN STYLE,CND,CHUNKY,RTS~^~~^~~^~Y~^~~^0^~~^6.25^3.80^9.00^4.00
+~06028~^~0600~^~Soup~Clam chowder~Canned, condensed~^~SOUP,CLAM CHOWDER,MANHATTAN,CND,COND~^~~^~~^~~^~~^0^~~^6.25^3.80^9.00^4.00

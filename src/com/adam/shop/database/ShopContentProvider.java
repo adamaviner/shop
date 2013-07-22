@@ -35,6 +35,7 @@ public class ShopContentProvider extends ContentProvider {
     public static final String CONTENT_TYPE;
 
     private static final UriMatcher sURIMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+    private static final HashMap<String, String> projectionMap = buildProjectionMap();
 
     static {
         sURIMatcher.addURI(AUTHORITY, CHOICES_BASE_PATH, CHOICES);
@@ -59,26 +60,20 @@ public class ShopContentProvider extends ContentProvider {
     @Override
     public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
-        queryBuilder.setTables(ChoiceTable.TABLE);
+        queryBuilder.setTables(ProductTable.TABLE_FTS);
+        queryBuilder.setProjectionMap(projectionMap);
         Cursor cursor = null;
         int uriType = sURIMatcher.match(uri);
         switch (uriType) {
-            case CHOICE_ID:
-                queryBuilder.appendWhere(ChoiceTable.COLUMN_ID + "=" + uri.getLastPathSegment());
-            case CHOICES:
-                cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
-                break;
             case PRODUCT_ID:
-                queryBuilder.setTables(ProductTable.TABLE);
-                queryBuilder.appendWhere(ProductTable.ID + "=" + uri.getLastPathSegment());
+                queryBuilder.appendWhere(ProductTable.ROW_ID + "=" + uri.getLastPathSegment());
                 cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case PRODUCTS:
-                queryBuilder.setTables(ProductTable.TABLE);
                 cursor = queryBuilder.query(database.getReadableDatabase(), projection, selection, selectionArgs, null, null, sortOrder);
                 break;
             case SEARCH_SUGGEST:
-                cursor = textSearch(uri.getLastPathSegment().toLowerCase(), null);
+                cursor = textSearch(uri.getLastPathSegment().toLowerCase(), null, queryBuilder);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI");
@@ -92,22 +87,22 @@ public class ShopContentProvider extends ContentProvider {
         return cursor;
     }
 
-    private Cursor textSearch(String query, String[] columns) {
+    private Cursor textSearch(String query, String[] columns, final SQLiteQueryBuilder queryBuilder) {
         String selection = ProductTable.TABLE_FTS + " MATCH ?";
         String[] selectionArgs = new String[]{query + "*"};
-        return query(selection, selectionArgs, columns);
+        return queryBuilder.query(database.getReadableDatabase(), columns, selection, selectionArgs, null, null, ProductTable.POPULARITY + " DESC");
     }
 
     private Cursor query(final String selection, final String[] selectionArgs, final String[] columns) {
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
         queryBuilder.setTables(ProductTable.TABLE_FTS);
-        queryBuilder.setProjectionMap(buildProjectionMap());
+        queryBuilder.setProjectionMap(projectionMap);
         Cursor cursor = queryBuilder.query(database.getReadableDatabase(), columns, selection, selectionArgs, null, null, null);
 
         return cursor;
     }
 
-    private HashMap<String, String> buildProjectionMap() {
+    private static HashMap<String, String> buildProjectionMap() {
         HashMap<String, String> map = new HashMap<String, String>();
         map.put(ProductTable.NAME, ProductTable.NAME);
         map.put(ProductTable.QUANTITY, ProductTable.QUANTITY);
@@ -115,8 +110,10 @@ public class ShopContentProvider extends ContentProvider {
         map.put(ProductTable.CATEGORY, ProductTable.CATEGORY);
         map.put(ProductTable.TREATMENT, ProductTable.TREATMENT);
         map.put(ProductTable.PRODUCT_ID, ProductTable.PRODUCT_ID);
-        map.put(ProductTable.ID, ProductTable.ID);
+        map.put(ProductTable.ID, "rowid AS " + BaseColumns._ID);
         map.put(BaseColumns._ID, "rowid AS " + BaseColumns._ID);
+        map.put(ProductTable.POPULARITY, ProductTable.POPULARITY);
+        map.put(ProductTable.ROW_ID, ProductTable.ROW_ID);
         map.put(SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID, "rowid AS " + SearchManager.SUGGEST_COLUMN_INTENT_DATA_ID);
         map.put(SearchManager.SUGGEST_COLUMN_SHORTCUT_ID, "rowid AS " + SearchManager.SUGGEST_COLUMN_SHORTCUT_ID);
         return map;
@@ -129,24 +126,24 @@ public class ShopContentProvider extends ContentProvider {
         int rowsAffected;
         String id;
         switch (uriType) {
-            case CHOICES:
-                rowsAffected = sqlDB.delete(ChoiceTable.TABLE, selection, selectionArgs);
-                break;
-            case CHOICE_ID:
-                id = uri.getLastPathSegment();
-                if (TextUtils.isEmpty(selection)) {
-                    rowsAffected = sqlDB.delete(ChoiceTable.TABLE, ChoiceTable.COLUMN_ID + "=" + id, null);
-                } else {
-                    rowsAffected = sqlDB.delete(ChoiceTable.TABLE, selection + " and " + ChoiceTable.COLUMN_ID + "=" + id, selectionArgs);
-                }
-                break;
+//            case CHOICES:
+//                rowsAffected = sqlDB.delete(ChoiceTable.TABLE, selection, selectionArgs);
+//                break;
+//            case CHOICE_ID:
+//                id = uri.getLastPathSegment();
+//                if (TextUtils.isEmpty(selection)) {
+//                    rowsAffected = sqlDB.delete(ChoiceTable.TABLE, ChoiceTable.COLUMN_ID + "=" + id, null);
+//                } else {
+//                    rowsAffected = sqlDB.delete(ChoiceTable.TABLE, selection + " and " + ChoiceTable.COLUMN_ID + "=" + id, selectionArgs);
+//                }
+//                break;
             case PRODUCT_ID:
                 id = uri.getLastPathSegment();
                 if (TextUtils.isEmpty(selection)) {
-                    sqlDB.delete(ProductTable.TABLE, ProductTable.ID + "=" + id, null);
+//                    sqlDB.delete(ProductTable.TABLE, ProductTable.ID + "=" + id, null);
                     rowsAffected = sqlDB.delete(ProductTable.TABLE_FTS, ProductTable.ROW_ID + "=" + id, null);
                 } else {
-                    sqlDB.delete(ProductTable.TABLE, selection + " and " + ProductTable.ID + "=" + id, selectionArgs);
+//                    sqlDB.delete(ProductTable.TABLE, selection + " and " + ProductTable.ID + "=" + id, selectionArgs);
                     rowsAffected = sqlDB.delete(ProductTable.TABLE_FTS, selection + " and " + ProductTable.ROW_ID + "=" + id, selectionArgs);
                 }
                 break;
@@ -167,23 +164,36 @@ public class ShopContentProvider extends ContentProvider {
         int uriType = sURIMatcher.match(uri);
         SQLiteDatabase sqlDB = database.getWritableDatabase();
         long id;
-        Uri returnURI;
         switch (uriType) {
-            case CHOICES:
-                id = sqlDB.insert(ChoiceTable.TABLE, null, values);
-                returnURI = Uri.parse(CHOICES_BASE_PATH + "/" + id);
-                break;
             case PRODUCTS:
-                id = sqlDB.insert(ProductTable.TABLE, null, values);
-                if (id != -1) // if insertion worked we insert to the fts table as well.
-                    id = sqlDB.insert(ProductTable.TABLE_FTS, null, values);
-                returnURI = Uri.parse(PRODUCTS_BASE_PATH + "/" + id);
+                if (updateProductIfExists(uri, values)) id = -1;
+                else id = sqlDB.insert(ProductTable.TABLE_FTS, null, values);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);
         }
         getContext().getContentResolver().notifyChange(uri, null);
-        return returnURI;
+        return Uri.parse(PRODUCTS_BASE_PATH + "/" + id);
+    }
+
+    /**
+     * checks if the product exists in the database.
+     * TODO could optimize this check using triggers see http://stackoverflow.com/questions/9880644/using-sqlite-create-virtual-table-using-fts3-with-unique-column-dosnot-stay-uniq
+     *
+     * @param uri
+     * @param values
+     * @return
+     */
+    private boolean updateProductIfExists(final Uri uri, final ContentValues values) {
+        final String selection = ProductTable.NAME + "=? AND " + ProductTable.DESCRIPTION + "=?";
+        final String[] selectionArgs = new String[]{values.getAsString(ProductTable.NAME), values.getAsString(ProductTable.DESCRIPTION)};
+        Cursor cursor = query(selection, selectionArgs, null);
+
+        if (!cursor.moveToFirst()) return false;
+        if (cursor.getInt(cursor.getColumnIndex(ProductTable.QUANTITY)) == 0)
+            update(uri, values, selection, selectionArgs);
+        return true;
+
     }
 
     @Override
@@ -192,25 +202,15 @@ public class ShopContentProvider extends ContentProvider {
         SQLiteDatabase sqlDB = database.getWritableDatabase();
         int rowsUpdated = 0;
         switch (uriType) {
-            case CHOICES:
-                rowsUpdated = sqlDB.update(ChoiceTable.TABLE, values, selection, selectionArgs);
-                break;
-            case CHOICE_ID:
+            case PRODUCT_ID:
                 String id = uri.getLastPathSegment();
                 if (TextUtils.isEmpty(selection)) {
-                    rowsUpdated = sqlDB.update(ChoiceTable.TABLE, values, ChoiceTable.COLUMN_ID + "=" + id, null);
-                } else {
-                    rowsUpdated = sqlDB.update(ChoiceTable.TABLE, values, ChoiceTable.COLUMN_ID + "=" + id + " and " + selection, selectionArgs);
-                }
-                break;
-            case PRODUCT_ID:
-                id = uri.getLastPathSegment();
-                if (TextUtils.isEmpty(selection)) {
-                    sqlDB.update(ProductTable.TABLE, values, ProductTable.ID + "=" + id, null);
                     rowsUpdated = sqlDB.update(ProductTable.TABLE_FTS, values, ProductTable.ROW_ID + "=" + id, null);
                 } else {
                 }
-
+                break;
+            case PRODUCTS:
+                rowsUpdated = sqlDB.update(ProductTable.TABLE_FTS, values, selection, selectionArgs);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown URI: " + uri);

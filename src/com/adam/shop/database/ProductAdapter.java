@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CursorAdapter;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.adam.shop.ChooseActivity;
@@ -33,17 +32,21 @@ public class ProductAdapter extends CursorAdapter {
         if (holder == null) {
             holder = new Holder();
             holder.productName = (TextView) view.findViewById(R.id.productName);
-            holder.productQuantity = (EditText) view.findViewById(R.id.productQuantity);
+            holder.productQuantity = (TextView) view.findViewById(R.id.productQuantity);
             holder.productDescription = (TextView) view.findViewById(R.id.productDescription);
             holder.nameIndex = cursor.getColumnIndexOrThrow(ProductTable.NAME);
             holder.DescriptionIndex = cursor.getColumnIndexOrThrow(ProductTable.DESCRIPTION);
-            holder.idIndex = cursor.getColumnIndexOrThrow(ProductTable.ID);
+            holder.quantityIndex = cursor.getColumnIndexOrThrow(ProductTable.QUANTITY);
+            holder.idIndex = cursor.getColumnIndexOrThrow(ProductTable.ROW_ID);
             holder.callWhenBinding = null;
             view.setTag(holder);
         }
 
         holder.productName.setText(cursor.getString(holder.nameIndex));
-        holder.productDescription.setText(cursor.getString(holder.DescriptionIndex).toUpperCase());
+        holder.productQuantity.setText(cursor.getString(holder.quantityIndex));
+        String desc = cursor.getString(holder.DescriptionIndex);
+        desc = desc == null ? "" : desc;
+        holder.productDescription.setText(desc.toUpperCase());
         holder.productId = cursor.getInt(holder.idIndex);
         Log.d(ChooseActivity.TAG, "Bound view: " + view.getId() + " to Product: " + holder.productName.getText());
     }
@@ -62,8 +65,9 @@ public class ProductAdapter extends CursorAdapter {
         public int DescriptionIndex;
         public int productId;
         public TextView productName;
-        public EditText productQuantity;
+        public TextView productQuantity;
         public Callable<Void> callWhenBinding;
         public TextView productDescription;
+        public int quantityIndex;
     }
 }

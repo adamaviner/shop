@@ -26,13 +26,14 @@ public class ProductTable {
     public static final String TREATMENT = "treatment";
     public static final String CATEGORY = "category";
     public static final String QUANTITY = "quantity";
+    public static final String POPULARITY = "popularity";
     private static final String text = " text collate nocase, ";
     private static final String textNotNull = " text collate nocase not null default '', ";
 
     // Database creation SQL statement
     private static final String baseCreate = ID + " integer primary key autoincrement, " + PRODUCT_ID + " integer, " +
             NAME + textNotNull + DESCRIPTION + textNotNull +
-            TREATMENT + text + CATEGORY + text +
+            TREATMENT + text + CATEGORY + text + POPULARITY + text +
             QUANTITY + " integer not null default 0, " +
             "unique(" + NAME + ", " + DESCRIPTION + "));";
 

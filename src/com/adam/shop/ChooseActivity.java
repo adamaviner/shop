@@ -91,7 +91,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
     public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.options_menu, menu);
 
-        // Get the SearchView and set the searchable configuration TODO fix the inconsistent search bar.
+        // Get the SearchView and set the searchable configuration
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
@@ -119,23 +119,26 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         Log.d(TAG, "trying to add product: " + name);
         if (TextUtils.isEmpty(name)) return;
 
-        final ContentValues ftsValues = new ContentValues();
-        ftsValues.put(ProductTable.NAME, name); //insert to fts
-        ftsValues.put(ProductTable.QUANTITY, 1); //insert to fts
-        getContentResolver().insert(ShopContentProvider.PRODUCTS_URI, ftsValues);
+        final ContentValues values = new ContentValues();
+        values.put(ProductTable.NAME, name);
+        values.put(ProductTable.QUANTITY, 1);
+        values.put(ProductTable.DESCRIPTION, "");
+        values.put(ProductTable.POPULARITY, 1);
+        getContentResolver().insert(ShopContentProvider.PRODUCTS_URI, values);
 
         Log.d(TAG, "added product: " + name);
         adapter.notifyDataSetChanged();
     }
 
-    private void add(final Uri itemUri) { //TODO the itemUri has an id which is too big by one... Maybe confusion between ROWID and _ID?
+    private void add(final Uri itemUri) {
         Log.d(TAG, "trying to add product by id: " + itemUri);
         ContentValues values = new ContentValues();
         Uri fixedUri = Uri.parse(ShopContentProvider.PRODUCTS_URI + "/" + (Integer.parseInt(itemUri.getLastPathSegment())));
         Cursor c = getContentResolver().query(fixedUri, null, null, null, null);
-        String name1 = c.getString(c.getColumnIndex(ProductTable.NAME)); // delete!
         int quantity = c.getInt(c.getColumnIndex(ProductTable.QUANTITY));
         quantity = quantity == 0 ? 1 : quantity;
+        int popularity = c.getInt(c.getColumnIndex(ProductTable.POPULARITY));
+        values.put(ProductTable.POPULARITY, popularity + 1);
         values.put(ProductTable.QUANTITY, quantity);
         getContentResolver().update(fixedUri, values, null, null);
         adapter.notifyDataSetChanged();
@@ -167,7 +170,7 @@ public class ChooseActivity extends ListActivity implements LoaderCallbacks<Curs
         Log.d(TAG, "creating Loader");
         final String name = ProductTable.NAME;
         final String quantity = ProductTable.QUANTITY;
-        final String[] projection = {ProductTable.ID, name, quantity, ProductTable.DESCRIPTION};
+        final String[] projection = {ProductTable.ID, ProductTable.ROW_ID, name, quantity, ProductTable.DESCRIPTION};
         return new CursorLoader(this, ShopContentProvider.PRODUCTS_URI, projection, quantity + ">0", null, null);
     }
 
